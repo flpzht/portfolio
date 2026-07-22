@@ -1,6 +1,7 @@
 @import '../styles/variables.css';
 @import '../styles/typography.css';
 @import '../styles/animations.css';
+@import '../styles/spacing.css';
 
 *,
 *::before,
@@ -53,4 +54,9 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+.container {
+  width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
 }

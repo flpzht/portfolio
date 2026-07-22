@@ -1,7 +1,31 @@
-:root{
+@import '../assets/fonts/fonts.css';
 
-  --font-primary: "Inter", sans-serif;
+:root {
+  --font-primary: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
 
-  --font-code: "JetBrains Mono", monospace;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
 
+p,
+span,
+button,
+a,
+input,
+textarea {
+  font-family: var(--font-primary);
+}
+
+code,
+pre {
+  font-family: var(--font-code);
 }
