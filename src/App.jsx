@@ -1,10 +1,9 @@
-function App() {
+import MainLayout from '@layouts/MainLayout/MainLayout';
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>Welcome to My Portfolio</h1>
-      {/* Add your portfolio components and content here */}
-    </div>
+    <MainLayout>
+      <h1>Portfolio</h1>
+    </MainLayout>
   );
 }
-
-export default App;
