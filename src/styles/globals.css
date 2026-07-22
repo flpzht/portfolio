@@ -1,6 +1,6 @@
-@import "./variables.css";
-@import "./typography.css";
-@import "./animations.css";
+@import '../styles/variables.css';
+@import '../styles/typography.css';
+@import '../styles/animations.css';
 
 *,
 *::before,
