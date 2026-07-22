@@ -1,0 +1,19 @@
+:root {
+
+  --background: #0B0B0F;
+
+  --surface: #17171C;
+
+  --primary: #AB627D;
+
+  --primary-hover: #C97E99;
+
+  --text: #F5F5F7;
+
+  --text-secondary: #A1A1AA;
+
+  --border: #2A2A33;
+
+  --shadow: rgba(171,98,125,.25);
+
+}
