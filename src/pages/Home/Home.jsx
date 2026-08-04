@@ -1,5 +1,6 @@
 import Hero from '@/sections/Hero/Hero';
 import About from '@/sections/About/About';
+import Skills from '@/sections/Skills/Skills';
 
 import styles from "./Home.module.css";
 
@@ -8,6 +9,7 @@ export default function Home() {
     <section className={styles.home}>
       <Hero />
       <About />
+      <Skills />
     </section>
   );
 }
