@@ -1,6 +1,7 @@
 import Hero from '@/sections/Hero/Hero';
 import About from '@/sections/About/About';
 import Skills from '@/sections/Skills/Skills';
+import Projects from '@/sections/Projects/Projects';
 
 import styles from "./Home.module.css";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
     </section>
   );
 }
