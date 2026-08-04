@@ -1,9 +1,12 @@
+import { Route, Routes } from 'react-router-dom';
+
 import MainLayout from '@/layouts/MainLayout/MainLayout';
+import Home from '@/pages/Home/Home';
 
 export default function App() {
   return (
-    <MainLayout>
-      <h1>Portfolio</h1>
-    </MainLayout>
+    <Routes>
+      <Route path="/" element={<MainLayout><Home /></MainLayout>} />
+    </Routes>
   );
 }
