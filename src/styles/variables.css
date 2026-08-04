@@ -1,4 +1,16 @@
+@import '../assets/fonts/fonts.css';
+
 :root {
+  /* ========= LAYOUT ========= */
+
+  --max-width: 1200px;
+  --header-height: 80px;
+
+  /* ========= FONTS ========= */
+
+  --font-primary: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
   /* ========= COLORS ========= */
 
   --background: #0b0b0f;
@@ -38,7 +50,18 @@
 
   --transition-fast: 0.2s ease;
 
-  --transition-default: 0.3s ease;
+  --transition-normal: 0.3s ease;
 
   --transition-slow: 0.5s ease;
+
+  /* ========= SPACING ========= */
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
 }
