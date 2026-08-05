@@ -1,24 +1,36 @@
 import styles from "./Navbar.module.css";
 
+const BRAND_NAME = "<Felipe />";
+
+const navigationLinks = [
+  { href: "#hero", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
+
 export default function Navbar() {
   return (
     <header className={styles.header}>
 
       <nav className={styles.nav}>
 
-        <a href="#hero" className={styles.logo} aria-label="Ir para o topo da página">{'<Felipe />'}</a>
+        <a href="#hero" className={styles.logo} aria-label="Ir para o topo da página">{BRAND_NAME}</a>
 
         <ul className={styles.menu}>
-          <li><a href="#hero" className={styles.link}>Home</a></li>
-          <li><a href="#about" className={styles.link}>About</a></li>
-          <li><a href="#skills" className={styles.link}>Skills</a></li>
-          <li><a href="#projects" className={styles.link}>Projects</a></li>
-          <li><a href="#contact" className={styles.link}>Contact</a></li>
+          {navigationLinks.map(({ href, label }) => (
+            <li key={href}>
+              <a href={href} className={styles.link}>
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <div className={styles.actions}>
-          {/* ThemeToggle */ }
-          {/* LanguageToggle */ }
+          {'🌙'}
+          {'🌐'}
         </div>
 
       </nav>
