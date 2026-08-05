@@ -21,6 +21,7 @@ body {
   color: var(--text);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
@@ -28,7 +29,8 @@ body {
 img,
 picture,
 svg,
-video {
+video,
+canvas {
   display: block;
   max-width: 100%;
 }
@@ -54,4 +56,14 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
 }
