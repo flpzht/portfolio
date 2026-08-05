@@ -1,11 +1,33 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-navbar);
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
 }
 
 .nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: var(--header-height);
 }
 
 .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
 .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  gap: 1rem;
 }
