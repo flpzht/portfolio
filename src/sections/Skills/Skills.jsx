@@ -9,6 +9,7 @@ const skillCategories = [
       "JavaScript",
       "React",
       "Vite",
+      "Tailwind CSS",
     ],
   },
   {
@@ -35,7 +36,7 @@ const skillCategories = [
       "GitHub",
       "VS Code",
       "Figma",
-      "Power BI",
+      "Postman",
     ],
   },
 ];
