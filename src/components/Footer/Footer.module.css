@@ -1,2 +1,90 @@
 .footer {
+  margin-top: 120px;
+  padding: 48px 0 32px;
+  background-color: #111111;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ab627d;
+}
+
+.description {
+  margin: 0;
+  color: #bdbdbd;
+  line-height: 1.7;
+}
+
+.navigation {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.link:hover {
+  color: #ab627d;
+  transform: translateY(-2px);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #8f8f8f;
+  font-size: 0.9rem;
+}
+
+.copy p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 80px;
+  }
+
+  .list {
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
 }
