@@ -1,9 +1,25 @@
-import styles from "./Skills.module.css";
+import Card from '@/components/Card/Card';
 
-const skillCategories = [
+import styles from './Skills.module.css';
+
+import frontendIcon from '@/assets/icons/frontendIcon.svg';
+import backendIcon from '@/assets/icons/backendIcon.svg';
+import databaseIcon from '@/assets/icons/databaseIcon.svg';
+import devtoolsIcon from '@/assets/icons/devtoolsIcon.svg';
+
+
+const skills = [
   {
+    id: "frontend",
+
+    image: frontendIcon,
+
     title: "Front-End",
-    skills: [
+
+    description:
+      "Tecnologias para desenvolvimento de interfaces.",
+
+    items: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -13,25 +29,46 @@ const skillCategories = [
     ],
   },
   {
+    id: "backend",
+
+    image: backendIcon,
+
     title: "Back-End",
-    skills: [
+
+    description:
+      "Construção de APIs e serviços.",
+
+    items: [
       "Node.js",
-      "Express.js",
-      "REST API",
+      "Express",
       "JWT",
+      "REST API",
     ],
   },
   {
+    id: "database",
+
+    image: databaseIcon,
+
     title: "Database",
-    skills: [
+
+    description:
+      "Databases e serviços.",
+
+    items: [
       "MongoDB",
       "MySQL",
       "SQL",
     ],
   },
   {
+    id: "tools",
+
+    image: devtoolsIcon,
     title: "Tools",
-    skills: [
+    description:
+      "Ferramentas de programação.",
+    items: [
       "Git",
       "GitHub",
       "VS Code",
@@ -42,8 +79,13 @@ const skillCategories = [
 ];
 
 export default function Skills() {
+
   return (
-    <section id="skills" className={styles.skills}>
+
+    <section
+      id="skills"
+      className={styles.skills}
+    >
       <div className={styles.container}>
 
         <h2 className={styles.title}>
@@ -51,29 +93,28 @@ export default function Skills() {
         </h2>
 
         <div className={styles.grid}>
-          {skillCategories.map(({ title, skills }) => (
-            <article
-              key={title}
-              className={styles.card}
-            >
-              <h3 className={styles.cardTitle}>
-                {title}
-              </h3>
 
+          {skills.map((skill) => (
+            <Card
+              key={skill.id}
+              image={skill.image}
+              title={skill.title}
+              description={skill.description}
+            >
               <ul className={styles.list}>
-                {skills.map((skill) => (
+
+                {skill.items.map((item) => (
                   <li
-                    key={skill}
+                    key={item}
                     className={styles.item}
                   >
-                    {skill}
+                    {item}
                   </li>
                 ))}
               </ul>
-            </article>
+            </Card>
           ))}
         </div>
-
       </div>
     </section>
   );
