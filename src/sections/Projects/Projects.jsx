@@ -3,8 +3,8 @@ import Button from '@/components/Button/Button';
 
 import styles from './Projects.module.css';
 
-import portfolioImage from '@/assets/images/portfolioImg.png';
-import aroundImage from '@/assets/images/aroundImg.png';
+import portfolioImage from '@/assets/images/projects/portfolioImg.png';
+import aroundImage from '@/assets/images/projects/aroundImg.png';
 
 const projects = [
 
