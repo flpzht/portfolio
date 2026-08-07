@@ -1,5 +1,7 @@
 import styles from './Hero.module.css';
 
+import heroImg from '@/assets/images/hero-img.png';
+
 export default function Hero() {
   return (
     <section id='hero' className={styles.hero}>
@@ -23,7 +25,7 @@ export default function Hero() {
           </div>
         </div>
         <div className={styles.image}>
-          {/* Em desenvolvimento */}
+          {heroImg && <img src={heroImg} alt='Imagem do desenvolvedor' /> }
         </div>
 
       </div>

@@ -38,8 +38,7 @@ export default function Footer() {
           </h2>
 
           <p className={styles.description}>
-            Desenvolvedor Full Stack focado em criar aplicações
-            modernas, acessíveis e de alta qualidade.
+            Desenvolvedor Full Stack focado em criar aplicações modernas, acessíveis e de alta qualidade.
           </p>
         </div>
 
