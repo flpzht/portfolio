@@ -1,3 +1,5 @@
+import AboutAnimation from '@/components/AboutAnimation/AboutAnimation';
+
 import styles from './About.module.css';
 
 export default function About() {
@@ -5,7 +7,9 @@ export default function About() {
     <section id='about' className={styles.about}>
       <div className={styles.container}>
 
-        <div className={styles.image}>{/* Em desenvolvimento */}</div>
+        <div className={styles.image}>
+          <AboutAnimation />
+        </div>
 
         <div className={styles.content}>
 
