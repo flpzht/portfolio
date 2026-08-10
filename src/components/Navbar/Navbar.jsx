@@ -16,7 +16,7 @@ export default function Navbar() {
 
       <nav className={styles.nav}>
 
-        <a href="#hero" className={styles.logo} aria-label="Ir para o topo da página">{BRAND_NAME}</a>
+        <a href="#" className={styles.logo} aria-label="Ir para o topo da página">{BRAND_NAME}</a>
 
         <ul className={styles.menu}>
           {navigationLinks.map(({ href, label }) => (

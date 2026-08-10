@@ -17,7 +17,8 @@ html {
 
 body {
   min-height: 100vh;
-  background: var(--background);
+  background: var(--background-screen);
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
