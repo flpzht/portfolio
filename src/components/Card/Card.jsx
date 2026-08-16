@@ -8,27 +8,29 @@ export default function Card({
 }) {
   return (
     <article className={styles.card}>
-
-      <img
-        className={styles.image}
-        src={image}
-        alt={title}
-      />
+      {image && (
+        <img
+          src={image}
+          alt={title}
+          className={styles.image}
+        />
+      )}
 
       <div className={styles.content}>
+        {title && (
+          <h3 className={styles.title}>
+            {title}
+          </h3>
+        )}
 
-        <h3 className={styles.title}>
-          {title}
-        </h3>
-
-        <p className={styles.description}>
-          {description}
-        </p>
+        {description && (
+          <p className={styles.description}>
+            {description}
+          </p>
+        )}
 
         {children}
-
       </div>
-
     </article>
   );
 }
