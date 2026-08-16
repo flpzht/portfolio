@@ -2,13 +2,7 @@ import styles from "./Navbar.module.css";
 
 const BRAND_NAME = "<Felipe />";
 
-const navigationLinks = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+import { navigationLinks } from "@/data/navigation";
 
 export default function Navbar() {
   return (

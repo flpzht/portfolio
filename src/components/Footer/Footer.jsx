@@ -1,30 +1,6 @@
 import styles from './Footer.module.css';
 
-const socialLinks = [
-  {
-    id: "github",
-
-    label: "GitHub",
-
-    href: "#",
-  },
-
-  {
-    id: "linkedin",
-
-    label: "LinkedIn",
-
-    href: "#",
-  },
-
-  {
-    id: "email",
-
-    label: "Email",
-
-    href: "mailto:email@email.com",
-  },
-];
+import { socialLinks } from '@/data/socialLinks';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
