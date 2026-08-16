@@ -17,7 +17,7 @@
   --surface: #17171c;
   --surface-hover: #1f1f27;
 
-  --background-screen: #AB627D radial-gradient(circle, rgba(171, 98, 125, 1) 0%, rgba(23, 20, 20, 1) 48%);
+  --background-screen: linear-gradient(125deg,#0f0b0f, #4d2b37);
 
   --primary: #ab627d;
   --primary-hover: #c97e99;

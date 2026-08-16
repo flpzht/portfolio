@@ -16,15 +16,31 @@ html {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   background: var(--background-screen);
-  background-attachment: fixed;
+  background-size: 400% 400%;
   color: var(--text);
   font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  animation: gradient 7s ease infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 img,
