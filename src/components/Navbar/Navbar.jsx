@@ -1,3 +1,5 @@
+import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
+
 import styles from "./Navbar.module.css";
 
 const BRAND_NAME = "<Felipe />";
@@ -23,7 +25,7 @@ export default function Navbar() {
         </ul>
 
         <div className={styles.actions}>
-          {'🌙'}
+          <ThemeToggle />
           {'🌐'}
         </div>
 

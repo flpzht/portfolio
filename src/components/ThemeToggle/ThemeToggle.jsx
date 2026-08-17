@@ -39,7 +39,7 @@ export default function ThemeToggle() {
       }
     >
       <span aria-hidden="true">
-        {isDark ? "☀" : "☾"}
+        {isDark ? "☀️" : "🌙"}
       </span>
     </button>
   );
