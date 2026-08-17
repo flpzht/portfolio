@@ -30,6 +30,8 @@ export default function About() {
               <li><strong>Back-end:</strong> APIs e serviços com Node.js e arquitetura limpa.</li>
               <li><strong>Boas práticas:</strong> Clean Code, versionamento estruturado com Git e código escalável.</li>
             </ul>
+          </p>
+          <p className={styles.description}>
             Busco oportunidades como Desenvolvedor para somar visão estratégica de negócio com entrega técnica de valor.
           </p>
         </div>

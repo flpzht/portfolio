@@ -57,3 +57,61 @@
 
   color: var(--text-secondary);
 }
+
+/* =========================
+   LAPTOP
+   ========================= */
+
+@media screen and (max-width: 1024px) {
+  .title {
+    margin-bottom: 0.8rem;
+  }
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .list {
+    margin: 0.5rem 0;
+  }
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+    .title {
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .list {
+    margin: 1rem 0;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+.title {
+  font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .list {
+    margin: 0.5rem 0;
+  }
+  .image img .badge {
+    font-size: 0.5rem;
+  }
+}
