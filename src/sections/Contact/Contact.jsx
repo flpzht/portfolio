@@ -33,7 +33,7 @@ export default function Contact() {
                 {contact.description}
               </p>
 
-              <Button href={contact.href}>
+              <Button href={contact.href} className={styles.contactButton}>
                 {contact.button}
               </Button>
             </article>

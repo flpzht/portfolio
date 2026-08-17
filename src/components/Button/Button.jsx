@@ -8,8 +8,9 @@ export default function Button({
   target,
   rel,
   variant = "primary",
+  className = '',
 }) {
-  const className = `${styles.button} ${styles[variant]}`;
+  className = `${styles.button} ${styles[variant]} ${className}`;
 
   if (href) {
     return (

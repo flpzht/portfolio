@@ -46,7 +46,8 @@
   flex-direction: column;
 
   justify-content: space-between;
-
+  align-items: center;
+  text-align: center;
   gap: 24px;
 
   padding: 32px;
@@ -70,4 +71,74 @@
   line-height: 1.6;
 
   flex: 1;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    );
+  }
+  .card {
+    padding: 24px;
+    gap: 16px;
+  }
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+  .cardDescription {
+    line-height: 1.4;
+  }
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+  .contactButton {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 200px);
+    justify-content: space-evenly;
+  }
+  .card {
+    padding: 24px;
+    gap: 16px;
+  }
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+  .cardDescription {
+    line-height: 1.4;
+  }
+  .cardDescription {
+    font-size: 0.9rem;
+  }
+  .contactButton {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 200px;
+    justify-content: center;
+  }
 }
