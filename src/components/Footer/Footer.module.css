@@ -1,6 +1,6 @@
 .footer {
-  margin-top: 120px;
-  padding: 48px 0 32px;
+  margin-top: 90px;
+  padding: var(--padding-2) 0 var(--padding-2);
   background-color: rgba(17, 17, 17, 0.50);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(12px);
@@ -67,7 +67,7 @@ backdrop-filter: blur(12px);
 
 .copy {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
   color: #8f8f8f;
   font-size: 0.9rem;
@@ -77,16 +77,76 @@ backdrop-filter: blur(12px);
   margin: 0;
 }
 
-@media (max-width: 768px) {
+/* =========================
+   LAPTOP
+   ========================= */
+
+@media screen and (max-width: 1024px) {
   .footer {
     margin-top: 80px;
+    padding: var(--padding-1) 0 var(--padding-1);
   }
+  .container {
+    gap: 16px;
+  }
+  .logo {
+    font-size: 1.75rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .copy {
+    font-size: 0.8rem;
+  }
+}
 
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 70px;
+  }
+  .container {
+    gap: 12px;
+  }
+.logo {
+  font-size: 1.5rem;
+}
+.description {
+  font-size: 0.8rem;
+}
   .list {
     gap: 16px;
   }
+  .link {
+    font-size: 0.9rem;
+  }
+  .copy {
+    font-size: 0.7rem;
+  }
+}
 
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
   .logo {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+  }
+  .description {
+    font-size: 0.7rem;
+  }
+  .list {
+    gap: 12px;
+  }
+  .link {
+    font-size: 0.8rem;
+  }
+  .copy {
+    font-size: 0.6rem;
   }
 }
