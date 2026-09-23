@@ -164,8 +164,8 @@ A configuração definitiva do processo de deploy será adicionada ao projeto qu
 
 **Felipe Carvalho de Souza Barros**
 
-* GitHub: [github.com/flpzht]
-* LinkedIn: [linkedin.com/in/felipecarvalhodesouzabarros]
+* GitHub: `[github.com/flpzht]`
+* LinkedIn: `[linkedin.com/in/felipecarvalhodesouzabarros]`
 * Email: `[flpcsb@hotmail.com]`
 
 ## 📄 Licença
