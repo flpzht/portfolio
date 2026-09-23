@@ -24,11 +24,6 @@
   padding: 24px;
 }
 
-.image:hover {
-  transform: scale(1.25);
-  transition: transform 0.5s ease;
-}
-
 .content {
   display: flex;
   flex-direction: column;
