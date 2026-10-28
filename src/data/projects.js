@@ -15,7 +15,7 @@ const projects = [
       "CSS Modules",
     ],
     github: "https://github.com/flpzht/portfolio",
-    demo: "#",
+    demo: "https://flpzht.github.io/portfolio/",
   },
 
   {
