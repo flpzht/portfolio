@@ -4,7 +4,7 @@ const socialLinks = [
 
     label: "GitHub",
 
-    href: "#",
+    href: "https://github.com/flpzht",
   },
 
   {
@@ -12,7 +12,7 @@ const socialLinks = [
 
     label: "LinkedIn",
 
-    href: "#",
+    href: "https://www.linkedin.com/in/felipecarvalhodesouzabarros/",
   },
 
   {
@@ -20,7 +20,7 @@ const socialLinks = [
 
     label: "Email",
 
-    href: "mailto:email@email.com",
+    href: "mailto:flpcsb@hotmail.com",
   },
 ];
 

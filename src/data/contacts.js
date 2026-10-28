@@ -4,7 +4,7 @@ const contacts = [
     title: "GitHub",
     description:
       "Confira meus projetos e contribuições.",
-    href: "#",
+    href: "https://github.com/flpzht",
     button: "Ver GitHub",
   },
 
@@ -13,7 +13,7 @@ const contacts = [
     title: "LinkedIn",
     description:
       "Conheça minha trajetória profissional.",
-    href: "#",
+    href: "https://www.linkedin.com/in/felipecarvalhodesouzabarros/",
     button: "Ver LinkedIn",
   },
 
@@ -25,7 +25,7 @@ const contacts = [
     description:
       "Entre em contato diretamente por e-mail.",
 
-    href: "mailto:email@email.com",
+    href: "mailto:flpcsb@hotmail.com",
 
     button: "Enviar e-mail",
   },
@@ -38,7 +38,7 @@ const contacts = [
     description:
       "Vamos conversar sobre oportunidades.",
 
-    href: "#",
+    href: "https://wa.me/5521996310874",
 
     button: "Enviar mensagem",
   },
