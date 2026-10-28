@@ -23,14 +23,14 @@ export default function About() {
           <p className={styles.description}>
             Hoje, canalizo essa capacidade analítica para a engenharia de software, construindo soluções completas no ecossistema Web.
           </p>
-          <p className={styles.description}>
+          <div className={styles.description}>
             O que estou construindo e estudando:
             <ul className={styles.list}>
               <li><strong>Front-end:</strong> Interfaces modernas, responsivas e acessíveis com React, JavaScript (ES6+) e CSS3.</li>
               <li><strong>Back-end:</strong> APIs e serviços com Node.js e arquitetura limpa.</li>
               <li><strong>Boas práticas:</strong> Clean Code, versionamento estruturado com Git e código escalável.</li>
             </ul>
-          </p>
+          </div>
           <p className={styles.description}>
             Busco oportunidades como Desenvolvedor para somar visão estratégica de negócio com entrega técnica de valor.
           </p>
