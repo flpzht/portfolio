@@ -21,7 +21,6 @@ const skills = [
       "JavaScript",
       "React",
       "Vite",
-      "Tailwind CSS",
     ],
   },
   {
