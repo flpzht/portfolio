@@ -37,7 +37,7 @@
 }
 
 .primary {
-  color: var(--text);
+  color: var(--on-primary);
 
   background-color: var(--primary);
 

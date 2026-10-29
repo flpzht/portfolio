@@ -4,18 +4,34 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 import styles from "./ThemeToggle.module.css";
 
+const THEME_COLORS = { dark: "#0f0b0f", light: "#f3e4eb" };
+
+function getInitialTheme() {
+  try {
+    return localStorage.getItem("theme") === "light" ? "light" : "dark";
+  } catch {
+    return "dark";
+  }
+}
+
 export default function ThemeToggle() {
   const { t } = useLanguage();
 
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "dark";
-  });
+  const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
     document.documentElement.classList.remove("dark", "light");
     document.documentElement.classList.add(theme);
 
-    localStorage.setItem("theme", theme);
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // localStorage indisponível: a preferência vale só nesta sessão
+    }
+
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", THEME_COLORS[theme]);
   }, [theme]);
 
   function handleToggle() {

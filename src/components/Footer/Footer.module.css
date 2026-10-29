@@ -1,7 +1,7 @@
 .footer {
   margin-top: 90px;
   padding: var(--padding-2) 0 var(--padding-2);
-  background-color: rgba(17, 17, 17, 0.50);
+  background-color: var(--footer-bg);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(12px);
 -webkit-backdrop-filter: blur(12px);
@@ -28,12 +28,12 @@ backdrop-filter: blur(12px);
   margin: 0;
   font-size: 2rem;
   font-weight: 900;
-  color: #ab627d;
+  color: var(--primary);
 }
 
 .description {
   margin: 0;
-  color: #bdbdbd;
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -52,7 +52,7 @@ backdrop-filter: blur(12px);
 }
 
 .link {
-  color: #f5f5f5;
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   transition:
@@ -61,7 +61,7 @@ backdrop-filter: blur(12px);
 }
 
 .link:hover {
-  color: #ab627d;
+  color: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -69,7 +69,7 @@ backdrop-filter: blur(12px);
   display: flex;
   flex-direction: row;
   gap: 8px;
-  color: #8f8f8f;
+  color: var(--text-faint);
   font-size: 0.9rem;
 }
 

@@ -71,7 +71,7 @@
   align-items: center;
   overflow: hidden;
   object-fit: contain;
-  filter: brightness(90%);
+  filter: var(--image-filter-hero);
 }
 
 /* =========================

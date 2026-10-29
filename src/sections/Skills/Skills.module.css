@@ -63,9 +63,9 @@
 
   color: var(--primary);
 
-  background-color: rgba(171, 98, 125, 0.12);
+  background-color: var(--chip-bg);
 
-  border: 1px solid rgba(171, 98, 125, 0.3);
+  border: 1px solid var(--chip-border);
   border-radius: var(--radius-sm);
 
   font-size: 0.875rem;

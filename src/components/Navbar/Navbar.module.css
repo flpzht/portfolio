@@ -4,12 +4,12 @@
   top: 0;
   z-index: var(--z-navbar);
 
-  background: rgba(0, 0, 0, 0.35);
+  background: var(--header-bg);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  border: 1px solid var(--header-border);
 
   border-bottom: 1px solid var(--border);
 }
@@ -35,9 +35,7 @@
 
   transition: color var(--transition-normal);
 
-  filter:
-    drop-shadow(0 0 5px #000)
-    drop-shadow(0 0 25px var(--primary-hover));
+  filter: var(--logo-glow);
 }
 
 .logo:hover {

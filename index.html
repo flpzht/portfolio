@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0A0E14" />
+    <meta name="theme-color" content="#0f0b0f" />
+    <script>
+      // Aplica o tema salvo antes da primeira pintura, evitando o flash do tema escuro
+      try {
+        document.documentElement.classList.add(
+          localStorage.getItem('theme') === 'light' ? 'light' : 'dark'
+        );
+      } catch (e) {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
 
     <title>Felipe Carvalho | Desenvolvedor Full Stack</title>
     <meta
