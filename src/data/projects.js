@@ -1,4 +1,4 @@
-import portfolioImage from '@/assets/images/projects/portfolio-img.webp';
+import portfolioImage from '@/assets/images/projects/portfolio-demo.gif';
 import aroundImage from '@/assets/images/projects/around-img.webp';
 
 const projects = [

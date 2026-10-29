@@ -13,6 +13,8 @@ export default function Card({
           src={image}
           alt={title}
           className={styles.image}
+          loading="lazy"
+          decoding="async"
         />
       )}
 
