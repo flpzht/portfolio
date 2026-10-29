@@ -27,6 +27,8 @@
 }
 
 .logo {
+  white-space: nowrap;
+
   color: var(--primary);
 
   font-family: var(--font-primary);
@@ -122,10 +124,11 @@
 }
 
 /* =========================
-   MOBILE
+   MOBILE / TABLET PEQUENO
+   Logo e ações na primeira linha, menu na segunda
    ========================= */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .nav {
     height: auto;
     min-height: var(--header-height);
@@ -137,6 +140,7 @@
   .logo {
     order: 1;
     font-size: 1.15rem;
+    white-space: nowrap;
   }
   .actions {
     order: 2;
@@ -145,16 +149,17 @@
   .menu {
     order: 3;
     width: 100%;
-    gap: 8px;
-    font-size: 0.8rem;
-    justify-content: space-between;
+    gap: 6px 16px;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 4px 0;
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 600px) {
   .menu {
-    font-size: 0.72rem;
-    gap: 6px;
+    gap: 6px 14px;
+    font-size: 0.8rem;
   }
 }

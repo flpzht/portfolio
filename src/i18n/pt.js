@@ -7,8 +7,10 @@ const pt = {
   nav: {
     hero: 'Início',
     about: 'Sobre',
+    experience: 'Experiência',
     skills: 'Habilidades',
     projects: 'Projetos',
+    certificates: 'Formação',
     contact: 'Contato',
     logoLabel: 'Ir para o topo da página',
   },
@@ -40,6 +42,76 @@ const pt = {
     altDev: 'Desenvolvedor Full Stack',
     sliderLabel: 'Comparar economista e desenvolvedor',
     altFin: 'Economista FP&A',
+  },
+
+  experience: {
+    title: 'Experiência',
+    items: [
+      {
+        role: 'Analista de Controladoria Pleno',
+        company: 'Fundação Orquestra Sinfônica Brasileira',
+        meta: 'Rio de Janeiro, RJ (híbrido)',
+        period: 'nov/2025 – mar/2026',
+        bullets: [
+          'Criei a planilha orçamentária usada por todos os setores para acompanhar o próprio orçamento e o gasto por projeto, permitindo realocar saldo de projetos com sobra para projetos com maior necessidade.',
+          'Estruturei o controle de gastos e defini datas fixas para pagamentos específicos, dando visibilidade do gasto real por despesa ao longo do projeto bianual.',
+        ],
+      },
+      {
+        role: 'Requalificação para desenvolvimento web',
+        company: 'DIO',
+        meta: 'Online',
+        period: 'abr/2025 – nov/2025',
+        description: 'Estudo de Python, SQL, Power BI, HTML, CSS e JavaScript.',
+      },
+      {
+        role: 'Analista de Controladoria Freelancer',
+        company: 'Autônomo',
+        meta: 'Rio de Janeiro, RJ (remoto)',
+        period: 'jan/2024 – abr/2025',
+        bullets: [
+          'Criei do zero planilhas orçamentárias para controle interno e cálculo de rentabilidade por projeto, cruzando o trabalho de cada setor e funcionário, o custo para a empresa e o valor cobrado.',
+          'Estabeleci a base de cálculo para definir o valor correto a cobrar em serviços futuros.',
+        ],
+      },
+      {
+        role: 'Supervisor Financeiro (2019–2023)',
+        company: 'Reserve Systems',
+        meta: 'Rio de Janeiro, RJ (híbrido)',
+        period: 'mai/2017 – dez/2023',
+        earlier: 'Antes: Analista Financeiro (2018–2019) e Assistente Financeiro (2017–2018)',
+        bullets: [
+          'Reduzi o tempo de faturamento dos 5 produtos de 10 para 2 dias úteis, com Excel e VBA.',
+          'Automatizei faturamento, fluxo de caixa, relatório de notas fiscais, relatório mensal de entradas e saídas e relatório semanal do financeiro (ex.: inadimplência).',
+          'Supervisionei 2 estagiários do financeiro.',
+        ],
+      },
+    ],
+  },
+
+  certificates: {
+    title: 'Formação e certificados',
+    items: [
+      {
+        type: 'Formação',
+        title: 'Programa de Desenvolvimento Web (Full Stack)',
+        institution: 'TripleTen',
+        details: 'Online · jan/2026 – out/2026 · 860 h',
+        description: 'Formação intensiva de 10 meses em desenvolvimento de aplicações web, com HTML5, CSS3, JavaScript, React, Node.js, Express.js, MongoDB, APIs REST, Git/GitHub e Webpack. Inclui 19 projetos com interfaces responsivas, integração com APIs, autenticação de usuários e aplicações web completas.',
+      },
+      {
+        type: 'Graduação',
+        title: 'Bacharelado em Economia',
+        institution: 'UERJ',
+        details: 'Rio de Janeiro, RJ · Conclusão em 2018',
+      },
+      {
+        type: 'Certificação',
+        title: 'Análise de Dados com Python, Power BI e SQL',
+        institution: 'DIO',
+        details: '2025 · 68 h',
+      },
+    ],
   },
 
   skills: {

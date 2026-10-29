@@ -1,0 +1,167 @@
+.experience {
+  padding: var(--section-y) 0;
+}
+
+.container {
+  width: min(900px, calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding-left: 2rem;
+}
+
+/* Linha vertical da timeline */
+.timeline::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+
+  width: 2px;
+
+  background: linear-gradient(to bottom, var(--primary), transparent);
+}
+
+.item {
+  position: relative;
+
+  padding: 24px;
+
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+
+  background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* Marcador de cada item */
+.item::before {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+  left: calc(-2rem + 1px);
+
+  width: 14px;
+  height: 14px;
+
+  border: 3px solid var(--background);
+  border-radius: 50%;
+
+  background: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+
+.period {
+  margin-bottom: 8px;
+
+  color: var(--chip-text);
+
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.role {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.company {
+  margin-top: 4px;
+
+  color: var(--text-secondary);
+
+  font-weight: 600;
+}
+
+.meta {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.earlier {
+  margin-top: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 0.9rem;
+}
+
+.description {
+  margin-top: 12px;
+
+  color: var(--text-muted);
+
+  line-height: 1.6;
+}
+
+.bullets {
+  margin-top: 12px;
+  padding-left: 1.25rem;
+
+  list-style: disc;
+}
+
+.bullets li {
+  margin-bottom: 8px;
+
+  color: var(--text-muted);
+
+  line-height: 1.6;
+}
+
+.bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .item {
+    padding: 18px;
+  }
+
+  .item::before {
+    left: calc(-1.5rem + 1px);
+    top: 24px;
+  }
+
+  .role {
+    font-size: 1.1rem;
+  }
+
+  .bullets li,
+  .description {
+    font-size: 0.9rem;
+  }
+}

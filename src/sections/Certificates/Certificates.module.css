@@ -1,0 +1,116 @@
+.certificates {
+  padding: var(--section-y) 0;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 2 * var(--gutter)));
+  margin: 0 auto;
+}
+
+.title {
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 24px;
+
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+
+  background-color: var(--card-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--card-hover-shadow);
+}
+
+.type {
+  color: var(--chip-text);
+
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.institution {
+  color: var(--text-secondary);
+
+  font-weight: 600;
+}
+
+.details {
+  color: var(--text-muted);
+
+  font-size: 0.9rem;
+}
+
+.description {
+  margin-top: 8px;
+
+  color: var(--text-muted);
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   LAPTOP
+   ========================= */
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* o card maior ocupa a linha toda e os outros dois ficam lado a lado */
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

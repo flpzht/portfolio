@@ -7,8 +7,10 @@ const en = {
   nav: {
     hero: 'Home',
     about: 'About',
+    experience: 'Experience',
     skills: 'Skills',
     projects: 'Projects',
+    certificates: 'Education',
     contact: 'Contact',
     logoLabel: 'Go to the top of the page',
   },
@@ -40,6 +42,76 @@ const en = {
     altDev: 'Full Stack Developer',
     sliderLabel: 'Compare economist and developer',
     altFin: 'FP&A Economist',
+  },
+
+  experience: {
+    title: 'Experience',
+    items: [
+      {
+        role: 'Senior Controllership Analyst',
+        company: 'Fundação Orquestra Sinfônica Brasileira',
+        meta: 'Rio de Janeiro, Brazil (hybrid)',
+        period: 'Nov 2025 – Mar 2026',
+        bullets: [
+          'Built the budget spreadsheet used by all departments to track their own budget and spending per project, allowing leftover funds from one project to be reallocated to projects with greater needs.',
+          'Structured expense control and set fixed dates for specific payments, giving visibility into actual spending per expense throughout the two-year project cycle.',
+        ],
+      },
+      {
+        role: 'Career retraining in web development',
+        company: 'DIO',
+        meta: 'Online',
+        period: 'Apr 2025 – Nov 2025',
+        description: 'Studied Python, SQL, Power BI, HTML, CSS and JavaScript.',
+      },
+      {
+        role: 'Freelance Controllership Analyst',
+        company: 'Self-employed',
+        meta: 'Rio de Janeiro, Brazil (remote)',
+        period: 'Jan 2024 – Apr 2025',
+        bullets: [
+          'Built from scratch budget spreadsheets for internal control and per-project profitability calculation, combining the work of each department and employee, the cost to the company and the amount billed.',
+          'Established the calculation base for setting the right price for future services.',
+        ],
+      },
+      {
+        role: 'Financial Supervisor (2019–2023)',
+        company: 'Reserve Systems',
+        meta: 'Rio de Janeiro, Brazil (hybrid)',
+        period: 'May 2017 – Dec 2023',
+        earlier: 'Earlier: Financial Analyst (2018–2019) and Financial Assistant (2017–2018)',
+        bullets: [
+          "Cut billing time for the company's 5 products from 10 to 2 business days using Excel and VBA.",
+          'Automated billing, cash flow, invoice reports, the monthly inflow/outflow report and the weekly finance report (e.g. delinquency).',
+          'Supervised 2 finance interns.',
+        ],
+      },
+    ],
+  },
+
+  certificates: {
+    title: 'Education and certificates',
+    items: [
+      {
+        type: 'Education',
+        title: 'Web Development Program (Full Stack)',
+        institution: 'TripleTen',
+        details: 'Online · Jan 2026 – Oct 2026 · 860 h',
+        description: 'Intensive 10-month program in web application development, covering HTML5, CSS3, JavaScript, React, Node.js, Express.js, MongoDB, REST APIs, Git/GitHub and Webpack. Includes 19 projects with responsive interfaces, API integration, user authentication and complete web applications.',
+      },
+      {
+        type: 'Degree',
+        title: 'B.A. in Economics',
+        institution: 'UERJ',
+        details: 'Rio de Janeiro, Brazil · Graduated 2018',
+      },
+      {
+        type: 'Certification',
+        title: 'Data Analysis with Python, Power BI and SQL',
+        institution: 'DIO',
+        details: '2025 · 68 h',
+      },
+    ],
   },
 
   skills: {
