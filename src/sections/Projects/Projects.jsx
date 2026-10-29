@@ -44,21 +44,26 @@ export default function Projects() {
 
               <div className={styles.actions}>
 
-                <Button
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t.projects.github}
-                </Button>
+                {project.repos.map((repo) => (
+                  <Button
+                    key={repo.type}
+                    href={repo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t.projects[repo.type]}
+                  </Button>
+                ))}
 
-                <Button
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t.projects.demo}
-                </Button>
+                {project.demo && (
+                  <Button
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {t.projects.demo}
+                  </Button>
+                )}
 
               </div>
 

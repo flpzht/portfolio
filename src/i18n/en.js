@@ -127,6 +127,8 @@ const en = {
   projects: {
     title: 'Projects',
     github: 'GitHub',
+    frontend: 'Front-end',
+    backend: 'Back-end',
     demo: 'View demo',
     items: {
       portfolio: {
@@ -136,6 +138,14 @@ const en = {
       around: {
         title: 'Around The U.S.',
         description: 'Full Stack application for sharing images.',
+      },
+      pokedex: {
+        title: 'Pokédex Card Flip',
+        description: 'Pokédex with 3D flipping cards that expand on click, consuming the PokéAPI with vanilla JavaScript.',
+      },
+      news: {
+        title: 'News Explorer',
+        description: 'News search built with React, plus a custom Node.js and MongoDB API with JWT authentication.',
       },
     },
   },
