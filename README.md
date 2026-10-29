@@ -11,7 +11,6 @@ Portfólio profissional de **Felipe Carvalho de Souza Barros**, Desenvolvedor Fu
 * React 19
 * JavaScript (ES Modules)
 * Vite
-* React Router
 * CSS Modules
 * GitHub Actions e GitHub Pages
 * Git e GitHub
@@ -20,25 +19,28 @@ Portfólio profissional de **Felipe Carvalho de Souza Barros**, Desenvolvedor Fu
 
 * **Seções:** Início, Sobre, Experiência, Habilidades, Projetos, Formação e Contato.
 * **Idiomas:** alternância entre português e inglês, com os textos centralizados em `src/i18n/`.
-* **Temas:** claro e escuro, aplicados antes da primeira renderização para evitar flash. A preferência fica salva no `localStorage`.
+* **Temas:** claro e escuro, aplicados antes da primeira renderização para evitar flash. Segue o tema do sistema e, depois que a pessoa escolhe, a preferência fica salva no `localStorage`.
 * **Projetos em accordion:** as faixas se expandem ao passar o mouse e mostram descrição, tecnologias e links. No celular viram um acordeão vertical por toque, com navegação por teclado.
 * **Fundo animado "Brisa":** pétalas leves que flutuam suavemente. Pausa quando a aba fica oculta e respeita `prefers-reduced-motion`.
 * **Footer com ondas animadas**, ícones sociais e descrição.
 * **Currículo:** botão para baixar o PDF no idioma selecionado.
 * **Paleta própria**, definida em variáveis CSS para os dois temas.
-* **SEO e compartilhamento:** metadados e Open Graph no `index.html`.
+* **SEO e compartilhamento:** título e descrição por idioma, Open Graph, Twitter Card, imagem de compartilhamento, dados estruturados (JSON-LD), `robots.txt` e `sitemap.xml`.
+* **Menu com seção ativa:** o link da seção visível fica destacado na navbar.
 
 ## 📱 Responsividade e acessibilidade
 
 * Layout adaptado para desktop, tablet e celular, sem rolagem horizontal.
-* Navegação por teclado e foco visível nos elementos interativos.
+* Navegação por teclado, foco visível e link "Pular para o conteúdo".
 * Animações desativadas para quem prefere movimento reduzido.
 * `aria-label`s nos controles e `alt` nas imagens de conteúdo.
 
 ## ⚡ Desempenho
 
 * Imagens do site em WebP.
-* Demonstrações dos projetos em GIF e WebP animado, com carregamento preguiçoso (`loading="lazy"`).
+* Demonstrações dos projetos em vídeo curto (WebM/MP4) com poster, que só tocam quando visíveis, e WebP animado onde o vídeo não compensa.
+* Fontes Inter e JetBrains Mono em versão variável (subset latino), cerca de 90 KB no total.
+* Imagem principal com dimensões declaradas e prioridade de carregamento.
 * Ícones SVG otimizados com SVGO.
 * Fundo animado feito apenas com `transform`, executado na GPU.
 
@@ -60,6 +62,7 @@ src/
 │   ├── Footer/
 │   ├── LanguageSwitcher/
 │   ├── Navbar/
+│   ├── ProjectMedia/   vídeo ou imagem dos projetos
 │   └── ThemeToggle/
 │
 ├── context/            provedor de idioma
@@ -82,8 +85,8 @@ src/
 │   └── Skills/
 │
 └── styles/
-    ├── animations.css
     ├── globals.css
+    ├── section.module.css  título e espaçamento compartilhados
     ├── typography.css
     └── variables.css   cores, espaçamentos e temas
 ```
@@ -126,12 +129,14 @@ npm install
 | `npm run build` | Gera a versão de produção em `dist/` |
 | `npm run preview` | Serve a versão de produção localmente |
 | `npm run lint` | Verifica o código com ESLint |
+| `npm run format` | Formata o código com Prettier |
+| `npm run format:check` | Confere a formatação sem alterar arquivos |
 
 Com o `base` configurado como `/portfolio/`, a prévia de produção fica em `http://localhost:4173/portfolio/`.
 
 ## 🌐 Deploy
 
-O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`). A cada push na branch `main`, o projeto é instalado com `npm ci`, construído e publicado no GitHub Pages.
+O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`). A cada push na branch `main`, o projeto é instalado com `npm ci`, passa pelo `npm run lint`, é construído e publicado no GitHub Pages.
 
 ## 👤 Autor
 
@@ -143,4 +148,4 @@ O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`).
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido como portfólio pessoal.
+Distribuído sob a licença [MIT](LICENSE).
