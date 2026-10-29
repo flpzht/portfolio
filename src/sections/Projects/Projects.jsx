@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 
+import ProjectMedia from '@/components/ProjectMedia/ProjectMedia';
 import { useLanguage } from '@/hooks/useLanguage';
 
 import styles from './Projects.module.css';
@@ -63,12 +64,9 @@ export default function Projects() {
                 onFocus={(event) => { if (event.target === event.currentTarget) setActive(index); }}
                 onKeyDown={(event) => handleKeyDown(event, index)}
               >
-                <img
-                  src={project.image}
-                  alt=""
+                <ProjectMedia
+                  media={project.media}
                   className={styles.image}
-                  loading="lazy"
-                  decoding="async"
                 />
 
                 <span className={styles.tag} aria-hidden="true">

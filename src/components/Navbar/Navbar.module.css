@@ -6,7 +6,7 @@
 
   background: var(--header-bg);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-header);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   border: 1px solid var(--header-border);
@@ -80,8 +80,13 @@
   transition: width var(--transition-normal);
 }
 
-.link:hover::after {
+.link:hover::after,
+.current::after {
   width: 100%;
+}
+
+.current {
+  color: var(--text);
 }
 
 .actions {

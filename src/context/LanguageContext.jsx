@@ -22,6 +22,16 @@ export function LanguageProvider({ children }) {
     document.documentElement.lang = t.meta.htmlLang;
     document.title = t.meta.title;
 
+    const setMeta = (selector, value) =>
+      document.querySelector(selector)?.setAttribute('content', value);
+
+    setMeta('meta[name="description"]', t.meta.description);
+    setMeta('meta[property="og:title"]', t.meta.title);
+    setMeta('meta[property="og:description"]', t.meta.description);
+    setMeta('meta[property="og:locale"]', t.meta.ogLocale);
+    setMeta('meta[name="twitter:title"]', t.meta.title);
+    setMeta('meta[name="twitter:description"]', t.meta.description);
+
     try {
       localStorage.setItem(STORAGE_KEY, language);
     } catch {

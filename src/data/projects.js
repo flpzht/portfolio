@@ -1,12 +1,21 @@
-import portfolioImage from '@/assets/images/projects/portfolio-demo.gif';
 import pokedexImage from '@/assets/images/projects/pokedex-demo.webp';
-import aroundImage from '@/assets/images/projects/around-demo.gif';
-import newsImage from '@/assets/images/projects/news-demo.gif';
+
+import portfolioMp4 from '@/assets/images/projects/portfolio-demo.mp4';
+import portfolioWebm from '@/assets/images/projects/portfolio-demo.webm';
+import portfolioPoster from '@/assets/images/projects/portfolio-poster.webp';
+
+import aroundMp4 from '@/assets/images/projects/around-demo.mp4';
+import aroundWebm from '@/assets/images/projects/around-demo.webm';
+import aroundPoster from '@/assets/images/projects/around-poster.webp';
+
+import newsMp4 from '@/assets/images/projects/news-demo.mp4';
+import newsWebm from '@/assets/images/projects/news-demo.webm';
+import newsPoster from '@/assets/images/projects/news-poster.webp';
 
 const projects = [
   {
     id: "portfolio",
-    image: portfolioImage,
+    media: { mp4: portfolioMp4, webm: portfolioWebm, poster: portfolioPoster },
     technologies: [
       "React",
       "Vite",
@@ -17,7 +26,7 @@ const projects = [
   },
   {
     id: "around",
-    image: aroundImage,
+    media: { mp4: aroundMp4, webm: aroundWebm, poster: aroundPoster },
     technologies: [
       "React",
       "Node.js",
@@ -29,7 +38,7 @@ const projects = [
   },
   {
     id: "pokedex",
-    image: pokedexImage,
+    media: { image: pokedexImage },
     technologies: [
       "JavaScript",
       "HTML5",
@@ -41,7 +50,7 @@ const projects = [
   },
   {
     id: "news",
-    image: newsImage,
+    media: { mp4: newsMp4, webm: newsWebm, poster: newsPoster },
     technologies: [
       "React",
       "Node.js",

@@ -8,7 +8,7 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-media);
   user-select: none;
   /* permite rolar a página na vertical e capturar o arrasto na horizontal */
   touch-action: pan-y;
@@ -52,7 +52,7 @@
 }
 
 .handle:focus-visible {
-  outline: 2px solid var(--text, #fff);
+  outline: 2px solid var(--text);
   outline-offset: 4px;
 }
 
@@ -72,7 +72,7 @@
   background-color: var(--background);
   color: var(--slider-accent);
   font-weight: bold;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-knob);
 }
 
 /* Badges informativas */
@@ -81,10 +81,10 @@
   bottom: 16px;
   z-index: 3;
   padding: 6px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--badge-border);
   border-radius: 6px;
-  background-color: rgba(62, 50, 57, 0.85);
-  color: #f7efe7;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
   font-size: 0.85rem;
   font-weight: 600;
   backdrop-filter: blur(4px);

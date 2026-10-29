@@ -1,29 +1,19 @@
 .skills {
-
-  padding: var(--section-y) 0;
-
+  composes: section from '../../styles/section.module.css';
 }
 
 
 .container {
-
-  width: min(var(--max-width), calc(100% - 2 * var(--gutter)));
-
-  margin: 0 auto;
+  composes: container from '../../styles/section.module.css';
 
   text-align: center;
-
 }
 
 
 .title {
+  composes: title from '../../styles/section.module.css';
 
   margin-bottom: 40px;
-
-  font-size: 2.5rem;
-
-  font-weight: 900;
-
 }
 
 

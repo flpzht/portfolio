@@ -74,6 +74,10 @@ export default function Hero() {
             <img
               src={heroImg}
               alt={t.hero.imageAlt}
+              width={800}
+              height={785}
+              fetchPriority="high"
+              decoding="async"
               className={styles.figure}
             />
           </div>

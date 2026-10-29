@@ -2,6 +2,9 @@ const en = {
   meta: {
     htmlLang: 'en',
     title: 'Felipe Carvalho | Full Stack Developer',
+    ogLocale: 'en_US',
+    description:
+      'Portfolio of Felipe Carvalho, Full Stack developer with React, Node.js and a background in FP&A, controllership and BI. See projects, skills and contact.',
   },
 
   nav: {
@@ -13,6 +16,7 @@ const en = {
     certificates: 'Education',
     contact: 'Contact',
     logoLabel: 'Go to the top of the page',
+    skip: 'Skip to content',
   },
 
   hero: {

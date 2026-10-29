@@ -2,7 +2,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 
 import styles from './Footer.module.css';
 
-import { socialLinks } from '@/data/socialLinks';
+import { socialLinks } from '@/data/contacts';
 
 const icons = {
   github: (

@@ -33,8 +33,10 @@ export default function Background() {
     let petals = [];
     let nodes = [];
     let frame = 0;
+    let lastWidth = width;
 
     const build = () => {
+      lastWidth = window.innerWidth;
       width = window.innerWidth;
       height = window.innerHeight;
 
@@ -95,6 +97,17 @@ export default function Background() {
       frame = 0;
     };
 
+    // No celular a barra de endereço altera só a altura ao rolar:
+    // reconstruir apenas quando a largura muda evita as pétalas "pularem".
+    const handleResize = () => {
+      if (window.innerWidth !== lastWidth) {
+        build();
+        render(0);
+      } else {
+        height = window.innerHeight;
+      }
+    };
+
     const handleVisibility = () => {
       if (document.hidden) stop();
       else start();
@@ -104,12 +117,12 @@ export default function Background() {
     render(0);
     start();
 
-    window.addEventListener('resize', build);
+    window.addEventListener('resize', handleResize);
     document.addEventListener('visibilitychange', handleVisibility);
 
     return () => {
       stop();
-      window.removeEventListener('resize', build);
+      window.removeEventListener('resize', handleResize);
       document.removeEventListener('visibilitychange', handleVisibility);
     };
   }, []);

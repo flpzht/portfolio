@@ -1,21 +1,29 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import Background from "@/components/Background/Background";
+import Navbar from '@/components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
+import Background from '@/components/Background/Background';
 
-import styles from "./MainLayout.module.css";
+import { useLanguage } from '@/hooks/useLanguage';
+
+import styles from './MainLayout.module.css';
 
 export default function MainLayout({ children }) {
+  const { t } = useLanguage();
+
   return (
-  <div className={styles.layout}>
-    <Background />
+    <div className={styles.layout}>
+      <a href="#main" className={styles.skip}>
+        {t.nav.skip}
+      </a>
 
-    <Navbar />
+      <Background />
 
-    <main className={styles.main}>
-      {children}
-    </main>
+      <Navbar />
 
-    <Footer />
-  </div>
-  )
+      <main id="main" tabIndex={-1} className={styles.main}>
+        {children}
+      </main>
+
+      <Footer />
+    </div>
+  );
 }

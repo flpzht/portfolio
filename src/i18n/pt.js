@@ -2,6 +2,9 @@ const pt = {
   meta: {
     htmlLang: 'pt-BR',
     title: 'Felipe Carvalho | Desenvolvedor Full Stack',
+    ogLocale: 'pt_BR',
+    description:
+      'Portfolio de Felipe Carvalho, desenvolvedor Full Stack com React, Node.js e experiência em FP&A, controladoria e BI. Veja projetos, habilidades e contato.',
   },
 
   nav: {
@@ -13,6 +16,7 @@ const pt = {
     certificates: 'Formação',
     contact: 'Contato',
     logoLabel: 'Ir para o topo da página',
+    skip: 'Pular para o conteúdo',
   },
 
   hero: {

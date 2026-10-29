@@ -6,11 +6,9 @@ import Projects from '@/sections/Projects/Projects';
 import Certificates from '@/sections/Certificates/Certificates';
 import Contact from '@/sections/Contact/Contact';
 
-import styles from "./Home.module.css";
-
 export default function Home() {
   return (
-    <section className={styles.home}>
+    <>
       <Hero />
       <About />
       <Experience />
@@ -18,6 +16,6 @@ export default function Home() {
       <Projects />
       <Certificates />
       <Contact />
-    </section>
+    </>
   );
 }
