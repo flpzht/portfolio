@@ -7,6 +7,7 @@ export default function Button({
   onClick,
   target,
   rel,
+  download,
   variant = "primary",
   className = '',
 }) {
@@ -19,6 +20,7 @@ export default function Button({
         className={className}
         target={target}
         rel={rel}
+        download={download}
       >
         {children}
       </a>

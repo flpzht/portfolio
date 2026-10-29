@@ -2,12 +2,15 @@ import Button from '@/components/Button/Button';
 
 import { useLanguage } from '@/hooks/useLanguage';
 
+import { resumes } from '@/data/resume';
+
 import styles from './Hero.module.css';
 
 import heroImg from '@/assets/images/hero/hero-img.png';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const resume = resumes[language];
 
   return (
     <section id='hero' className={styles.hero}>
@@ -29,6 +32,13 @@ export default function Hero() {
             <Button href="#projects">{t.hero.projectsButton}</Button>
             <Button href="#contact" variant="secondary">
               {t.hero.contactButton}
+            </Button>
+            <Button
+              href={resume.href}
+              download={resume.fileName}
+              variant="secondary"
+            >
+              {t.hero.resumeButton}
             </Button>
           </div>
         </div>

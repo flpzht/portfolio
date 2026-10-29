@@ -20,6 +20,7 @@ const pt = {
       'Desenvolvedor apaixonado por criar interfaces modernas, acessíveis e performáticas utilizando React, JavaScript e tecnologias web.',
     projectsButton: 'Ver projetos',
     contactButton: 'Entrar em contato',
+    resumeButton: 'Baixar currículo',
     imageAlt: 'Felipe Carvalho, desenvolvedor Full Stack',
   },
 

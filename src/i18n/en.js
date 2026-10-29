@@ -20,6 +20,7 @@ const en = {
       'Developer passionate about building modern, accessible and high-performance interfaces with React, JavaScript and web technologies.',
     projectsButton: 'View projects',
     contactButton: 'Get in touch',
+    resumeButton: 'Download résumé',
     imageAlt: 'Felipe Carvalho, Full Stack developer',
   },
 
