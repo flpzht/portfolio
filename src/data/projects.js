@@ -1,6 +1,7 @@
 import portfolioImage from '@/assets/images/projects/portfolio-demo.gif';
 import pokedexImage from '@/assets/images/projects/pokedex-demo.webp';
-import aroundImage from '@/assets/images/projects/around-img.webp';
+import aroundImage from '@/assets/images/projects/around-demo.gif';
+import newsImage from '@/assets/images/projects/news-demo.gif';
 
 const projects = [
   {
@@ -40,6 +41,7 @@ const projects = [
   },
   {
     id: "news",
+    image: newsImage,
     technologies: [
       "React",
       "Node.js",
