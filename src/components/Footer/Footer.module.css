@@ -1,153 +1,148 @@
 .footer {
+  position: relative;
   margin-top: 90px;
-  padding: var(--padding-2) 0 var(--padding-2);
-  background-color: var(--footer-bg);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
+  color: var(--footer-text);
 }
 
-.container {
-  width: min(1200px, 90%);
-  margin: 0 auto;
+/* ========= ONDAS ========= */
+
+.waves {
+  position: relative;
+  height: 90px;
+  line-height: 0;
+  margin-bottom: -1px;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+}
+
+.parallax use {
+  animation: wave-move 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax use:nth-child(1) {
+  fill: rgba(var(--footer-wave), 0.35);
+  animation-delay: -2s;
+  animation-duration: 8s;
+}
+
+.parallax use:nth-child(2) {
+  fill: rgba(var(--footer-wave), 0.3);
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+
+.parallax use:nth-child(3) {
+  fill: rgba(var(--footer-wave), 0.35);
+  animation-delay: -4s;
+  animation-duration: 16s;
+}
+
+.parallax use:nth-child(4) {
+  fill: var(--footer-solid);
+  animation-delay: -5s;
+  animation-duration: 22s;
+}
+
+@keyframes wave-move {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/* ========= CONTEÚDO ========= */
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
+  padding: 0.5rem var(--gutter) 2rem;
+  background-color: var(--footer-solid);
   text-align: center;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 800px;
-}
-
-.logo {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--primary);
-}
-
-.description {
-  margin: 0;
-  color: var(--text-muted);
-  line-height: 1.7;
-}
-
-.navigation {
-  width: 100%;
-}
-
-.list {
+.social {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.link {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
+.social {
+  gap: 1rem;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--footer-text);
+  background-color: var(--footer-icon-bg);
   transition:
-    color 0.3s ease,
+    background-color 0.3s ease,
     transform 0.3s ease;
 }
 
-.link:hover {
-  color: var(--primary);
-  transform: translateY(-2px);
+.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.icon:hover,
+.icon:focus-visible {
+  background-color: var(--footer-icon-bg-hover);
+  transform: translateY(-3px);
+}
+
+.description {
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.6;
+  color: var(--footer-text);
+  opacity: 0.9;
 }
 
 .copy {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px 8px;
-  color: var(--text-faint);
+  margin: 0.5rem 0 0;
   font-size: 0.9rem;
+  color: var(--footer-text-muted);
 }
 
-.copy p {
-  margin: 0;
-}
-
-/* =========================
-   LAPTOP
-   ========================= */
-
-@media screen and (max-width: 1024px) {
-  .footer {
-    margin-top: 80px;
-    padding: var(--padding-1) 0 var(--padding-1);
-  }
-  .container {
-    gap: 16px;
-  }
-  .logo {
-    font-size: 1.75rem;
-  }
-  .description {
-    font-size: 0.9rem;
-  }
-  .copy {
-    font-size: 0.8rem;
+@media (prefers-reduced-motion: reduce) {
+  .parallax use {
+    animation: none;
   }
 }
-
-
-/* =========================
-   TABLET
-   ========================= */
 
 @media screen and (max-width: 768px) {
   .footer {
     margin-top: 70px;
   }
-  .container {
-    gap: 12px;
-  }
-.logo {
-  font-size: 1.5rem;
-}
-.description {
-  font-size: 0.8rem;
-}
-  .list {
-    gap: 16px;
-  }
-  .link {
-    font-size: 0.9rem;
-  }
-  .copy {
-    font-size: 0.75rem;
-  }
-}
 
-/* =========================
-   MOBILE
-   ========================= */
-
-@media screen and (max-width: 600px) {
-  .logo {
-    font-size: 1.25rem;
+  .waves {
+    height: 60px;
   }
+
+  .content {
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
   .description {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
-  .list {
-    gap: 12px;
-  }
-  .link {
-    font-size: 0.9rem;
-  }
+
   .copy {
     font-size: 0.75rem;
   }

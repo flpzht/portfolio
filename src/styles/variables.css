@@ -44,6 +44,12 @@
   --header-bg: rgba(46, 36, 42, 0.7);
   --header-border: rgba(247, 239, 231, 0.1);
   --footer-bg: rgba(36, 28, 33, 0.6);
+  --footer-solid: #6b5560;
+  --footer-wave: 158, 129, 137;
+  --footer-text: #f7efe7;
+  --footer-text-muted: #e8d2c4;
+  --footer-icon-bg: rgba(247, 239, 231, 0.12);
+  --footer-icon-bg-hover: rgba(247, 239, 231, 0.24);
 
   --chip-bg: rgba(199, 169, 163, 0.14);
   --chip-border: rgba(199, 169, 163, 0.35);
@@ -152,6 +158,12 @@ html.light {
   --header-bg: rgba(247, 239, 231, 0.78);
   --header-border: rgba(107, 85, 96, 0.18);
   --footer-bg: rgba(232, 210, 196, 0.5);
+  --footer-solid: #c7a9a3;
+  --footer-wave: 158, 129, 137;
+  --footer-text: #3e3239;
+  --footer-text-muted: #4e3d45;
+  --footer-icon-bg: rgba(62, 50, 57, 0.1);
+  --footer-icon-bg-hover: rgba(62, 50, 57, 0.2);
 
   --chip-bg: rgba(107, 85, 96, 0.1);
   --chip-border: rgba(107, 85, 96, 0.3);
