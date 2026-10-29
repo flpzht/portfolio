@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 
+import { useLanguage } from "@/hooks/useLanguage";
+
 import styles from "./ThemeToggle.module.css";
 
 export default function ThemeToggle() {
+  const { t } = useLanguage();
+
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("theme") || "dark";
   });
@@ -29,13 +33,13 @@ export default function ThemeToggle() {
       onClick={handleToggle}
       aria-label={
         isDark
-          ? "Ativar tema claro"
-          : "Ativar tema escuro"
+          ? t.theme.toLight
+          : t.theme.toDark
       }
       title={
         isDark
-          ? "Ativar tema claro"
-          : "Ativar tema escuro"
+          ? t.theme.toLight
+          : t.theme.toDark
       }
     >
       <span aria-hidden="true">

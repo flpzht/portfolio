@@ -1,4 +1,7 @@
 import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
+import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
+
+import { useLanguage } from "@/hooks/useLanguage";
 
 import styles from "./Navbar.module.css";
 
@@ -7,18 +10,20 @@ const BRAND_NAME = "<Felipe />";
 import { navigationLinks } from "@/data/navigation";
 
 export default function Navbar() {
+  const { t } = useLanguage();
+
   return (
     <header className={styles.header}>
 
       <nav className={styles.nav}>
 
-        <a href="#" className={styles.logo} aria-label="Ir para o topo da página">{BRAND_NAME}</a>
+        <a href="#" className={styles.logo} aria-label={t.nav.logoLabel}>{BRAND_NAME}</a>
 
         <ul className={styles.menu}>
-          {navigationLinks.map(({ href, label }) => (
-            <li key={href}>
+          {navigationLinks.map(({ id, href }) => (
+            <li key={id}>
               <a href={href} className={styles.link}>
-                {label}
+                {t.nav[id]}
               </a>
             </li>
           ))}
@@ -26,7 +31,7 @@ export default function Navbar() {
 
         <div className={styles.actions}>
           <ThemeToggle />
-          {'🌐'}
+          <LanguageSwitcher />
         </div>
 
       </nav>

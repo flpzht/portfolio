@@ -1,8 +1,11 @@
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from './Footer.module.css';
 
 import { socialLinks } from '@/data/socialLinks';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,13 +17,13 @@ export default function Footer() {
           </h2>
 
           <p className={styles.description}>
-            Desenvolvedor Full Stack focado em criar aplicações modernas, acessíveis e de alta qualidade.
+            {t.footer.description}
           </p>
         </div>
 
         <nav
           className={styles.navigation}
-          aria-label="Redes sociais"
+          aria-label={t.footer.socialLabel}
         >
           <ul className={styles.list}>
             {socialLinks.map((link) => (
@@ -43,7 +46,7 @@ export default function Footer() {
             &copy; {currentYear} Felipe Carvalho.
           </p>
 
-          <p>Todos os direitos reservados.</p>
+          <p>{t.footer.rights}</p>
         </div>
       </div>
     </footer>

@@ -1,11 +1,15 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from '@/components/AboutAnimation/AboutAnimation.module.css';
 
 import imageDev from '@/assets/images/about/imagem-dev.png';
 import imageFin from '@/assets/images/about/imagem-fin.png';
 
 export default function AboutAnimation() {
+  const { t } = useLanguage();
+
   const [sliderPosition, setSliderPosition] = useState(50); // Posição em porcentagem (0 a 100)
   const [containerWidth, setContainerWidth] = useState(0);
 
@@ -139,15 +143,15 @@ export default function AboutAnimation() {
 
   return (
     <div className={styles.sliderContainer} id='sliderContainer' ref={containerRef}>
-      <span className={styles.badge + ' ' + styles.badgeLeft}>Economista</span>
-      <span className={styles.badge + ' ' + styles.badgeRight}>Full Stack Dev</span>
+      <span className={styles.badge + ' ' + styles.badgeLeft}>{t.about.badgeLeft}</span>
+      <span className={styles.badge + ' ' + styles.badgeRight}>{t.about.badgeRight}</span>
 
-      <img src={imageDev} alt="Desenvolvedor Full Stack" className={styles.imgBackground} />
+      <img src={imageDev} alt={t.about.altDev} className={styles.imgBackground} />
 
       <div className={styles.imgForegroundWrapper} id='foregroundWrapper' style={{ width: `${sliderPosition}%` }}>
         <img
           src={imageFin}
-          alt="Economista FP&A"
+          alt={t.about.altFin}
           className={styles.imgForeground}
           id='imgForeground'
           style={{ width: containerWidth ? `${containerWidth}px` : '100%' }}
