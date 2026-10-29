@@ -1,32 +1,34 @@
 import Button from '@/components/Button/Button';
 
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from './Hero.module.css';
 
 import heroImg from '@/assets/images/hero/hero-img.png';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id='hero' className={styles.hero}>
 
       <div className={styles.container}>
         <div className={styles.content}>
 
-          <p className={styles.greeting}>Olá, sou</p>
+          <p className={styles.greeting}>{t.hero.greeting}</p>
 
           <h1 className={styles.name}>Felipe Carvalho</h1>
 
-          <p className={styles.role}>Full Stack Developer</p>
+          <p className={styles.role}>{t.hero.role}</p>
 
           <p className={styles.description}>
-            Desenvolvedor apaixonado por criar interfaces modernas,
-            acessíveis e performáticas utilizando React, JavaScript e
-            tecnologias web.
+            {t.hero.description}
           </p>
 
           <div className={styles.buttons}>
-            <Button href="#projects">Ver projetos</Button>
+            <Button href="#projects">{t.hero.projectsButton}</Button>
             <Button href="#contact" variant="secondary">
-              Entrar em contato
+              {t.hero.contactButton}
             </Button>
           </div>
         </div>
@@ -34,7 +36,7 @@ export default function Hero() {
         <div className={styles.image}>
           <img
             src={heroImg}
-            alt="Felipe Carvalho, desenvolvedor Full Stack"
+            alt={t.hero.imageAlt}
           />
         </div>
 

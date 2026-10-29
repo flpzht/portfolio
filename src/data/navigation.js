@@ -1,9 +1,9 @@
 const navigationLinks = [
-  { href: "#hero", label: "Início" },
-  { href: "#about", label: "Sobre" },
-  { href: "#skills", label: "Habilidades" },
-  { href: "#projects", label: "Projetos" },
-  { href: "#contact", label: "Contato" },
+  { id: "hero", href: "#hero" },
+  { id: "about", href: "#about" },
+  { id: "skills", href: "#skills" },
+  { id: "projects", href: "#projects" },
+  { id: "contact", href: "#contact" },
 ];
 
 export { navigationLinks };

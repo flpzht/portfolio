@@ -1,11 +1,15 @@
 import Card from '@/components/Card/Card';
 import Button from '@/components/Button/Button';
 
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from './Projects.module.css';
 
 import { projects } from '@/data/projects';
 
 export default function Projects() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="projects"
@@ -14,7 +18,7 @@ export default function Projects() {
       <div className={styles.container}>
 
         <h2 className={styles.title}>
-          Projetos
+          {t.projects.title}
         </h2>
 
         <div className={styles.grid}>
@@ -23,8 +27,8 @@ export default function Projects() {
             <Card
               key={project.id}
               image={project.image}
-              title={project.title}
-              description={project.description}
+              title={t.projects.items[project.id].title}
+              description={t.projects.items[project.id].description}
             >
 
               <ul className={styles.technologies}>
@@ -45,7 +49,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  {t.projects.github}
                 </Button>
 
                 <Button
@@ -53,7 +57,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ver demo
+                  {t.projects.demo}
                 </Button>
 
               </div>

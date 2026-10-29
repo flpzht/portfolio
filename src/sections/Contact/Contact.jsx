@@ -1,10 +1,14 @@
 import Button from '@/components/Button/Button';
 
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from './Contact.module.css';
 
 import { contacts } from '@/data/contacts';
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="contact"
@@ -12,32 +16,36 @@ export default function Contact() {
     >
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Contato
+          {t.contact.title}
         </h2>
 
         <p className={styles.subtitle}>
-          Gostou do meu trabalho? Vamos conversar.
+          {t.contact.subtitle}
         </p>
 
         <div className={styles.grid}>
-          {contacts.map((contact) => (
-            <article
-              key={contact.id}
-              className={styles.card}
-            >
-              <h3 className={styles.cardTitle}>
-                {contact.title}
-              </h3>
+          {contacts.map((contact) => {
+            const text = t.contact.items[contact.id];
 
-              <p className={styles.cardDescription}>
-                {contact.description}
-              </p>
+            return (
+              <article
+                key={contact.id}
+                className={styles.card}
+              >
+                <h3 className={styles.cardTitle}>
+                  {text.title}
+                </h3>
 
-              <Button href={contact.href} className={styles.contactButton}>
-                {contact.button}
-              </Button>
-            </article>
-          ))}
+                <p className={styles.cardDescription}>
+                  {text.description}
+                </p>
+
+                <Button href={contact.href} className={styles.contactButton}>
+                  {text.button}
+                </Button>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

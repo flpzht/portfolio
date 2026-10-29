@@ -2,13 +2,9 @@ import portfolioImage from '@/assets/images/projects/portfolio-img.png';
 import aroundImage from '@/assets/images/projects/around-img.png';
 
 const projects = [
-
   {
     id: "portfolio",
     image: portfolioImage,
-    title: "Portfolio",
-    description:
-      "Meu portfólio pessoal desenvolvido com React e Vite.",
     technologies: [
       "React",
       "Vite",
@@ -17,13 +13,9 @@ const projects = [
     github: "https://github.com/flpzht/portfolio",
     demo: "https://flpzht.github.io/portfolio/",
   },
-
   {
     id: "around",
     image: aroundImage,
-    title: "Around The U.S.",
-    description:
-      "Aplicação Full Stack para compartilhamento de imagens.",
     technologies: [
       "React",
       "Node.js",

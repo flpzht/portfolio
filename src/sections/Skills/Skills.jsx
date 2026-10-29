@@ -1,10 +1,13 @@
 import Card from '@/components/Card/Card';
 
+import { useLanguage } from '@/hooks/useLanguage';
+
 import styles from './Skills.module.css';
 
 import { skills } from '@/data/skills';
 
 export default function Skills() {
+  const { t } = useLanguage();
 
   return (
 
@@ -15,7 +18,7 @@ export default function Skills() {
       <div className={styles.container}>
 
         <h2 className={styles.title}>
-          Habilidades
+          {t.skills.title}
         </h2>
 
         <div className={styles.grid}>
@@ -24,8 +27,8 @@ export default function Skills() {
             <Card
               key={skill.id}
               image={skill.image}
-              title={skill.title}
-              description={skill.description}
+              title={t.skills.groups[skill.id].title}
+              description={t.skills.groups[skill.id].description}
             >
               <ul className={styles.list}>
 
