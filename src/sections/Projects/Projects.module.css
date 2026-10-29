@@ -19,49 +19,203 @@
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
-  gap: 2rem;
+/* =========================
+   ACCORDION
+   ========================= */
+
+.accordion {
+  display: flex;
+  gap: 0.75rem;
+  height: 440px;
 }
 
-.grid img {
+.panel {
+  position: relative;
+
+  flex: 1 1 0;
+  min-width: 0;
+
+  overflow: hidden;
+
+  background-color: var(--surface);
+
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: flex-grow 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.panel.active {
+  flex-grow: 5;
+
+  cursor: default;
+}
+
+.panel:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.image {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
-  object-position: center;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top center;
+
+  filter: grayscale(1) brightness(0.62);
+
+  transition: filter 0.5s ease;
+}
+
+.active .image {
+  filter: none;
+}
+
+/* Nome na faixa recolhida */
+
+.tag {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+
+  color: #f7efe7;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: opacity 0.3s ease;
+}
+
+.tag span {
+  white-space: nowrap;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.active .tag {
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+/* Detalhes na faixa aberta */
+
+.info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 3rem 1.25rem 1.25rem;
+
+  color: #f7efe7;
+
+  background: linear-gradient(
+    to top,
+    rgba(46, 36, 42, 0.96) 25%,
+    rgba(46, 36, 42, 0)
+  );
+
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.35s ease 0.15s,
+    transform 0.35s ease 0.15s;
+}
+
+.active .info {
+  opacity: 1;
+  transform: none;
+}
+
+.projectTitle {
+  margin: 0;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.description {
+  margin: 0;
+
+  color: #e8d2c4;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem;
 
-  margin-top: 1.5rem;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .technology {
-  padding: 0.4rem 0.8rem;
+  padding: 0.25rem 0.65rem;
 
-  color: var(--chip-text);
+  color: #e8d2c4;
 
-  background-color: var(--chip-bg);
+  background-color: rgba(247, 239, 231, 0.12);
 
-  border: 1px solid var(--chip-border);
+  border: 1px solid rgba(247, 239, 231, 0.28);
   border-radius: var(--radius-sm);
 
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: auto;
-  padding-top: 1.5rem;
+  gap: 0.75rem;
+}
+
+.link {
+  padding: 0.55rem 1rem;
+
+  color: #3e3239;
+
+  background-color: #c7a9a3;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+.link:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.link:focus-visible {
+  outline: 2px solid #f7efe7;
+  outline-offset: 2px;
 }
 
 /* =========================
@@ -69,23 +223,68 @@
    ========================= */
 
 @media screen and (max-width: 1024px) {
+  .accordion {
+    height: 420px;
+  }
 }
 
-
 /* =========================
-   TABLET
+   TABLET E MOBILE: acordeão vertical
    ========================= */
 
 @media screen and (max-width: 768px) {
   .title {
     margin-bottom: 2rem;
   }
+
+  .accordion {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    flex: none;
+    height: 60px;
+
+    transition: height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .panel.active {
+    height: 400px;
+  }
+
+  .tag {
+    top: 0;
+    bottom: 0;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-left: 1rem;
+  }
+
+  .tag span {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+
+  .info {
+    padding: 2.5rem 1rem 1rem;
+  }
 }
 
-/* =========================
-   MOBILE
-   ========================= */
+@media screen and (max-width: 480px) {
+  .panel.active {
+    height: 440px;
+  }
+}
 
-@media screen and (max-width: 600px) {
-
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .image,
+  .tag,
+  .info,
+  .link {
+    transition: none;
+  }
 }
