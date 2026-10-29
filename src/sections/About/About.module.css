@@ -1,5 +1,5 @@
 .about {
-  padding: 6rem 2rem;
+  padding: var(--section-y) var(--gutter);
 }
 
 .container {
@@ -110,8 +110,5 @@
   }
   .list {
     margin: 0.5rem 0;
-  }
-  .image img .badge {
-    font-size: 0.5rem;
   }
 }

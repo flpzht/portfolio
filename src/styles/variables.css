@@ -6,6 +6,10 @@
   --max-width: 1200px;
   --header-height: 80px;
 
+  /* Espaçamento horizontal e vertical padrão das seções */
+  --gutter: 2rem;
+  --section-y: 6rem;
+
   /* ========= FONTS ========= */
 
   --font-primary: 'Inter', sans-serif;
@@ -28,6 +32,8 @@
   --border: #2a2a33;
 
   --on-primary: #ffffff;
+
+  --chip-text: #dba3b8;
 
   --text-muted: #bdbdbd;
   --text-faint: #8f8f8f;
@@ -108,6 +114,15 @@
 --padding-10: 10rem; /* 160px */
 }
 
+/* ========= RESPONSIVE SPACING ========= */
+
+@media screen and (max-width: 768px) {
+  :root {
+    --gutter: 1rem;
+    --section-y: 3.5rem;
+  }
+}
+
 /* ========= LIGHT THEME ========= */
 
 html.light {
@@ -121,6 +136,8 @@ html.light {
   --primary: #94506b;
   --primary-hover: #7d4259;
   --on-primary: #ffffff;
+
+  --chip-text: #94506b;
 
   --text: #17171c;
   --text-secondary: #4f3f52;
