@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#3e3239" />
     <script>
-      // Aplica o tema salvo antes da primeira pintura, evitando o flash do tema escuro
-      try {
-        document.documentElement.classList.add(
-          localStorage.getItem('theme') === 'light' ? 'light' : 'dark'
-        );
-      } catch (e) {
-        document.documentElement.classList.add('dark');
-      }
+      // Aplica o tema antes da primeira pintura, evitando o flash:
+      // usa a escolha salva e, sem ela, a preferência do sistema.
+      (function () {
+        var theme = 'dark';
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved === 'light' || saved === 'dark') {
+            theme = saved;
+          } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            theme = 'light';
+          }
+        } catch (e) {}
+        document.documentElement.classList.add(theme);
+        if (theme === 'light') {
+          document
+            .querySelector('meta[name="theme-color"]')
+            .setAttribute('content', '#f7efe7');
+        }
+      })();
     </script>
 
     <title>Felipe Carvalho | Desenvolvedor Full Stack</title>
@@ -21,6 +32,7 @@
       name="description"
       content="Portfolio de Felipe Carvalho, desenvolvedor Full Stack com React, Node.js e experiência em FP&A, controladoria e BI. Veja projetos, habilidades e contato."
     />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="Felipe Carvalho de Souza Barros" />
     <link rel="canonical" href="https://flpzht.github.io/portfolio/" />
 
@@ -32,6 +44,41 @@
       content="Projetos, habilidades e contato de Felipe Carvalho, desenvolvedor Full Stack."
     />
     <meta property="og:url" content="https://flpzht.github.io/portfolio/" />
+    <meta property="og:site_name" content="Felipe Carvalho" />
+    <meta property="og:image" content="https://flpzht.github.io/portfolio/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Felipe Carvalho, Full Stack Developer" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Felipe Carvalho | Desenvolvedor Full Stack" />
+    <meta
+      name="twitter:description"
+      content="Projetos, habilidades e contato de Felipe Carvalho, desenvolvedor Full Stack."
+    />
+    <meta name="twitter:image" content="https://flpzht.github.io/portfolio/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Felipe Carvalho de Souza Barros",
+        "alternateName": "Felipe Carvalho",
+        "jobTitle": "Full Stack Developer",
+        "url": "https://flpzht.github.io/portfolio/",
+        "image": "https://flpzht.github.io/portfolio/og-image.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rio de Janeiro",
+          "addressCountry": "BR"
+        },
+        "knowsAbout": ["React", "JavaScript", "Node.js", "MongoDB", "FP&A", "BI"],
+        "sameAs": [
+          "https://github.com/flpzht",
+          "https://www.linkedin.com/in/felipecarvalhodesouzabarros/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
