@@ -24,6 +24,9 @@
 
   --background-screen: linear-gradient(125deg, #362c32 0%, #3e3239 45%, #4d3f46 100%);
 
+  --petal-from: rgba(199, 169, 163, 0.85);
+  --petal-to: rgba(158, 129, 137, 0.55);
+
   --primary: #c7a9a3;
   --primary-hover: #e8d2c4;
   --on-primary: #3e3239;
@@ -135,6 +138,9 @@ html.light {
 
   --background: #f7efe7;
   --background-screen: linear-gradient(125deg, #f7efe7 0%, #f0e2d7 55%, #e8d2c4 100%);
+
+  --petal-from: rgba(158, 129, 137, 0.85);
+  --petal-to: rgba(199, 169, 163, 0.55);
   --surface: #fcf8f4;
   --surface-hover: #f1e4da;
 

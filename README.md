@@ -1,50 +1,71 @@
-# Portfolio de Felipe Carvalho
+# Portfólio de Felipe Carvalho
 
-Portfolio profissional de **Felipe Carvalho de Souza Barros**, desenvolvido para apresentar projetos, habilidades e experiência como desenvolvedor Full Stack.
+Portfólio profissional de **Felipe Carvalho de Souza Barros**, Desenvolvedor Full Stack, criado para apresentar projetos, habilidades, experiência e formação. O site é bilíngue (português e inglês) e tem tema claro e escuro.
 
 ## 🚀 Deploy
 
-🔗 **Acessar o portfolio:** [flpzht.github.io/portfolio](https://flpzht.github.io/portfolio/)
+🔗 **Acessar o portfólio:** [flpzht.github.io/portfolio](https://flpzht.github.io/portfolio/)
 
 ## 💻 Tecnologias
 
-* React
-* JavaScript
-* HTML5
-* CSS3
+* React 19
+* JavaScript (ES Modules)
 * Vite
+* React Router
 * CSS Modules
-* Git
-* GitHub
+* GitHub Actions e GitHub Pages
+* Git e GitHub
+
+## ✨ Funcionalidades
+
+* **Seções:** Início, Sobre, Experiência, Habilidades, Projetos, Formação e Contato.
+* **Idiomas:** alternância entre português e inglês, com os textos centralizados em `src/i18n/`.
+* **Temas:** claro e escuro, aplicados antes da primeira renderização para evitar flash. A preferência fica salva no `localStorage`.
+* **Projetos em accordion:** as faixas se expandem ao passar o mouse e mostram descrição, tecnologias e links. No celular viram um acordeão vertical por toque, com navegação por teclado.
+* **Fundo animado "Brisa":** pétalas leves que flutuam suavemente. Pausa quando a aba fica oculta e respeita `prefers-reduced-motion`.
+* **Footer com ondas animadas**, ícones sociais e descrição.
+* **Currículo:** botão para baixar o PDF no idioma selecionado.
+* **Paleta própria**, definida em variáveis CSS para os dois temas.
+* **SEO e compartilhamento:** metadados e Open Graph no `index.html`.
+
+## 📱 Responsividade e acessibilidade
+
+* Layout adaptado para desktop, tablet e celular, sem rolagem horizontal.
+* Navegação por teclado e foco visível nos elementos interativos.
+* Animações desativadas para quem prefere movimento reduzido.
+* `aria-label`s nos controles e `alt` nas imagens de conteúdo.
+
+## ⚡ Desempenho
+
+* Imagens do site em WebP.
+* Demonstrações dos projetos em GIF e WebP animado, com carregamento preguiçoso (`loading="lazy"`).
+* Ícones SVG otimizados com SVGO.
+* Fundo animado feito apenas com `transform`, executado na GPU.
 
 ## 📂 Estrutura
 
 ```text
 src/
 ├── assets/
-│   ├── documents/
+│   ├── documents/      currículos em PDF (PT e EN)
 │   ├── fonts/
 │   ├── icons/
 │   └── images/
 │
 ├── components/
 │   ├── AboutAnimation/
+│   ├── Background/     fundo animado (Brisa)
 │   ├── Button/
 │   ├── Card/
 │   ├── Footer/
 │   ├── LanguageSwitcher/
-│   ├── Loader/
 │   ├── Navbar/
-│   ├── SocialLinks/
 │   └── ThemeToggle/
 │
-├── data/
-│   ├── contacts.js
-│   ├── navigation.js
-│   ├── projects.js
-│   ├── skills.js
-│   └── socialLinks.js
-│
+├── context/            provedor de idioma
+├── data/               ids, links e imagens (sem textos)
+├── hooks/              useLanguage
+├── i18n/               textos em português e inglês
 ├── layouts/
 │   └── MainLayout/
 │
@@ -53,7 +74,9 @@ src/
 │
 ├── sections/
 │   ├── About/
+│   ├── Certificates/
 │   ├── Contact/
+│   ├── Experience/
 │   ├── Hero/
 │   ├── Projects/
 │   └── Skills/
@@ -62,53 +85,23 @@ src/
     ├── animations.css
     ├── globals.css
     ├── typography.css
-    └── variables.css
+    └── variables.css   cores, espaçamentos e temas
 ```
 
-## ✨ Sobre o projeto
+### Organização do código
 
-Este portfolio foi desenvolvido com foco em:
+* **Dados e textos separados:** `src/data/` guarda ids, links e imagens. Os textos ficam em `src/i18n/`, o que facilita traduzir ou editar conteúdo sem mexer nos componentes.
+* **Componentes reutilizáveis** para elementos recorrentes, como `Button`, `Card`, `Navbar`, `Footer` e `ThemeToggle`.
+* **CSS Modules** para estilos isolados por componente e variáveis CSS globais para a paleta.
 
-* interfaces modernas;
-* responsividade;
-* acessibilidade;
-* reutilização de componentes;
-* organização e escalabilidade do código;
-* separação entre dados e apresentação;
-* boas práticas de desenvolvimento React.
+## 🗂️ Projetos exibidos
 
-## 🎨 Recursos
-
-### Tema
-
-O portfolio possui suporte a:
-
-* 🌙 Tema escuro
-* ☀️ Tema claro
-
-A preferência de tema é armazenada no `localStorage`.
-
-### Componentes reutilizáveis
-
-O projeto utiliza componentes reutilizáveis para elementos recorrentes da interface, como:
-
-* `Card`
-* `Button`
-* `Navbar`
-* `Footer`
-* `ThemeToggle`
-
-### Dados
-
-As informações exibidas pelas sections são separadas em `src/data/`, mantendo os componentes focados na apresentação.
-
-## 📱 Responsividade
-
-A interface foi desenvolvida para diferentes tamanhos de tela:
-
-* Desktop
-* Tablet
-* Mobile
+| Projeto | Tecnologias | Links |
+|---|---|---|
+| Portfolio | React, Vite, CSS Modules | [Código](https://github.com/flpzht/portfolio) · [Demo](https://flpzht.github.io/portfolio/) |
+| Around The U.S. | React, Node.js, Express, MongoDB | [Código](https://github.com/flpzht/web_project_api_full) · [Demo](https://flp-around-us.verymad.net/signin) |
+| Pokédex Card Flip | JavaScript, HTML5, CSS3, PokéAPI | [Código](https://github.com/flpzht/card-flip-overlay) · [Demo](https://flpzht.github.io/card-flip-overlay/) |
+| News Explorer | React, Node.js, Express, MongoDB, JWT | [Front-end](https://github.com/flpzht/news-explorer-frontend) · [Back-end](https://github.com/flpzht/news-explorer-backend) |
 
 ## 🛠️ Desenvolvimento
 
@@ -119,51 +112,26 @@ A interface foi desenvolvida para diferentes tamanhos de tela:
 
 ### Instalação
 
-Clone o repositório:
-
 ```bash
 git clone https://github.com/flpzht/portfolio.git
-```
-
-Entre na pasta:
-
-```bash
 cd portfolio
-```
-
-Instale as dependências:
-
-```bash
 npm install
 ```
 
-Execute o projeto em ambiente de desenvolvimento:
+### Scripts
 
-```bash
-npm run dev
-```
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera a versão de produção em `dist/` |
+| `npm run preview` | Serve a versão de produção localmente |
+| `npm run lint` | Verifica o código com ESLint |
 
-O projeto estará disponível no endereço indicado pelo Vite no terminal.
-
-## 📦 Build
-
-Para gerar a versão de produção:
-
-```bash
-npm run build
-```
-
-Para visualizar localmente a versão de produção:
-
-```bash
-npm run preview
-```
-
-Com o `base` configurado como `/portfolio/`, a prévia fica em `http://localhost:4173/portfolio/`.
+Com o `base` configurado como `/portfolio/`, a prévia de produção fica em `http://localhost:4173/portfolio/`.
 
 ## 🌐 Deploy
 
-O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`). A cada push na branch `main`, o projeto é construído e publicado no GitHub Pages.
+O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`). A cada push na branch `main`, o projeto é instalado com `npm ci`, construído e publicado no GitHub Pages.
 
 ## 👤 Autor
 
@@ -175,4 +143,4 @@ O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`).
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido como portfolio pessoal.
+Este projeto foi desenvolvido como portfólio pessoal.
