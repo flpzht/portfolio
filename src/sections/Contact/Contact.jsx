@@ -12,7 +12,7 @@ export default function Contact() {
     >
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Contact
+          Contato
         </h2>
 
         <p className={styles.subtitle}>

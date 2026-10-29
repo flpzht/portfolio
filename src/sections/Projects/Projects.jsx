@@ -14,7 +14,7 @@ export default function Projects() {
       <div className={styles.container}>
 
         <h2 className={styles.title}>
-          Projects
+          Projetos
         </h2>
 
         <div className={styles.grid}>
@@ -53,7 +53,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Live Demo
+                  Ver demo
                 </Button>
 
               </div>

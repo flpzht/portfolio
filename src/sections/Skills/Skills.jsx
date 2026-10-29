@@ -15,7 +15,7 @@ export default function Skills() {
       <div className={styles.container}>
 
         <h2 className={styles.title}>
-          Skills
+          Habilidades
         </h2>
 
         <div className={styles.grid}>
