@@ -1,13 +1,10 @@
-# Felipe — Portfolio
+# Portfolio de Felipe Carvalho
 
 Portfolio profissional de **Felipe Carvalho de Souza Barros**, desenvolvido para apresentar projetos, habilidades e experiência como desenvolvedor Full Stack.
 
 ## 🚀 Deploy
 
-🔗 **Acessar o portfolio:**
-`[LINK DO DEPLOY]`
-
-> O link será atualizado após a publicação do projeto.
+🔗 **Acessar o portfolio:** [flpzht.github.io/portfolio](https://flpzht.github.io/portfolio/)
 
 ## 💻 Tecnologias
 
@@ -25,7 +22,9 @@ Portfolio profissional de **Felipe Carvalho de Souza Barros**, desenvolvido para
 ```text
 src/
 ├── assets/
+│   ├── documents/
 │   ├── fonts/
+│   ├── icons/
 │   └── images/
 │
 ├── components/
@@ -33,7 +32,10 @@ src/
 │   ├── Button/
 │   ├── Card/
 │   ├── Footer/
+│   ├── LanguageSwitcher/
+│   ├── Loader/
 │   ├── Navbar/
+│   ├── SocialLinks/
 │   └── ThemeToggle/
 │
 ├── data/
@@ -43,15 +45,18 @@ src/
 │   ├── skills.js
 │   └── socialLinks.js
 │
+├── layouts/
+│   └── MainLayout/
+│
+├── pages/
+│   └── Home/
+│
 ├── sections/
 │   ├── About/
 │   ├── Contact/
 │   ├── Hero/
 │   ├── Projects/
 │   └── Skills/
-│
-├── layouts/
-│   └── MainLayout/
 │
 └── styles/
     ├── animations.css
@@ -74,15 +79,6 @@ Este portfolio foi desenvolvido com foco em:
 
 ## 🎨 Recursos
 
-### Tema
-
-O portfolio possui suporte a:
-
-* 🌙 Tema escuro
-* ☀️ Tema claro
-
-A preferência de tema é armazenada no `localStorage`.
-
 ### Componentes reutilizáveis
 
 O projeto utiliza componentes reutilizáveis para elementos recorrentes da interface, como:
@@ -91,7 +87,6 @@ O projeto utiliza componentes reutilizáveis para elementos recorrentes da inter
 * `Button`
 * `Navbar`
 * `Footer`
-* `ThemeToggle`
 
 ### Dados
 
@@ -109,7 +104,7 @@ A interface foi desenvolvida para diferentes tamanhos de tela:
 
 ### Pré-requisitos
 
-* Node.js
+* Node.js 20.19 ou superior
 * npm
 
 ### Instalação
@@ -117,13 +112,13 @@ A interface foi desenvolvida para diferentes tamanhos de tela:
 Clone o repositório:
 
 ```bash
-git clone [LINK DO REPOSITÓRIO]
+git clone https://github.com/flpzht/portfolio.git
 ```
 
 Entre na pasta:
 
 ```bash
-cd [NOME DO REPOSITÓRIO]
+cd portfolio
 ```
 
 Instale as dependências:
@@ -154,19 +149,19 @@ Para visualizar localmente a versão de produção:
 npm run preview
 ```
 
+Com o `base` configurado como `/portfolio/`, a prévia fica em `http://localhost:4173/portfolio/`.
+
 ## 🌐 Deploy
 
-O projeto está preparado para ser publicado no GitHub Pages.
-
-A configuração definitiva do processo de deploy será adicionada ao projeto quando essa etapa for executada.
+O deploy é automático via **GitHub Actions** (`.github/workflows/deploy.yml`). A cada push na branch `main`, o projeto é construído e publicado no GitHub Pages.
 
 ## 👤 Autor
 
 **Felipe Carvalho de Souza Barros**
 
-* GitHub: `[github.com/flpzht]`
-* LinkedIn: `[linkedin.com/in/felipecarvalhodesouzabarros]`
-* Email: `[flpcsb@hotmail.com]`
+* GitHub: [github.com/flpzht](https://github.com/flpzht)
+* LinkedIn: [linkedin.com/in/felipecarvalhodesouzabarros](https://www.linkedin.com/in/felipecarvalhodesouzabarros)
+* Email: [flpcsb@hotmail.com](mailto:flpcsb@hotmail.com)
 
 ## 📄 Licença
 
