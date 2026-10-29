@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 import Button from '@/components/Button/Button';
 
 import { useLanguage } from '@/hooks/useLanguage';
@@ -11,6 +13,24 @@ import heroImg from '@/assets/images/hero/hero-img.webp';
 export default function Hero() {
   const { language, t } = useLanguage();
   const resume = resumes[language];
+  const tiltRef = useRef(null);
+
+  const handlePointerMove = (event) => {
+    if (event.pointerType !== 'mouse') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    tiltRef.current?.style.setProperty('--rx', `${(-y * 10).toFixed(2)}deg`);
+    tiltRef.current?.style.setProperty('--ry', `${(x * 12).toFixed(2)}deg`);
+  };
+
+  const handlePointerLeave = () => {
+    tiltRef.current?.style.setProperty('--rx', '0deg');
+    tiltRef.current?.style.setProperty('--ry', '0deg');
+  };
 
   return (
     <section id='hero' className={styles.hero}>
@@ -43,11 +63,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className={styles.image}>
-          <img
-            src={heroImg}
-            alt={t.hero.imageAlt}
-          />
+        <div
+          className={styles.image}
+          onPointerMove={handlePointerMove}
+          onPointerLeave={handlePointerLeave}
+        >
+          <span className={styles.halo} aria-hidden="true" />
+
+          <div ref={tiltRef} className={styles.tilt}>
+            <img
+              src={heroImg}
+              alt={t.hero.imageAlt}
+              className={styles.figure}
+            />
+          </div>
         </div>
 
       </div>
