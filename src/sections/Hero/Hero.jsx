@@ -6,7 +6,7 @@ import { resumes } from '@/data/resume';
 
 import styles from './Hero.module.css';
 
-import heroImg from '@/assets/images/hero/hero-img.png';
+import heroImg from '@/assets/images/hero/hero-img.webp';
 
 export default function Hero() {
   const { language, t } = useLanguage();

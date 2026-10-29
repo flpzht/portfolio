@@ -4,8 +4,8 @@ import { useLanguage } from '@/hooks/useLanguage';
 
 import styles from './AboutAnimation.module.css';
 
-import imageDev from '@/assets/images/about/imagem-dev.png';
-import imageFin from '@/assets/images/about/imagem-fin.png';
+import imageDev from '@/assets/images/about/imagem-dev.webp';
+import imageFin from '@/assets/images/about/imagem-fin.webp';
 
 const INITIAL_POSITION = 50; // porcentagem (0 a 100)
 const AUTOPLAY_SPEED = 0.012; // porcentagem por milissegundo

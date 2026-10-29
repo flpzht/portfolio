@@ -1,5 +1,5 @@
-import portfolioImage from '@/assets/images/projects/portfolio-img.png';
-import aroundImage from '@/assets/images/projects/around-img.png';
+import portfolioImage from '@/assets/images/projects/portfolio-img.webp';
+import aroundImage from '@/assets/images/projects/around-img.webp';
 
 const projects = [
   {
