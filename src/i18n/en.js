@@ -37,6 +37,7 @@ const en = {
     badgeLeft: 'Economist',
     badgeRight: 'Full Stack Dev',
     altDev: 'Full Stack Developer',
+    sliderLabel: 'Compare economist and developer',
     altFin: 'FP&A Economist',
   },
 

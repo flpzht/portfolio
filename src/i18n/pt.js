@@ -37,6 +37,7 @@ const pt = {
     badgeLeft: 'Economista',
     badgeRight: 'Full Stack Dev',
     altDev: 'Desenvolvedor Full Stack',
+    sliderLabel: 'Comparar economista e desenvolvedor',
     altFin: 'Economista FP&A',
   },
 

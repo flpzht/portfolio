@@ -1,98 +1,100 @@
-    /* Container Principal */
-    .sliderContainer {
-      position: relative;
-      width: 100%;
-      max-width: 600px; /* Ajuste o tamanho máximo conforme seu layout */
-      aspect-ratio: 1 / 1; /* Mantém a proporção exata das imagens geradas */
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-      user-select: none;
-    }
+/* Container principal */
+.sliderContainer {
+  --slider-accent: var(--primary, #38f8ab);
 
-    /* Imagem Base (Dev - Fica ao fundo) */
-    .imgBackground {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  /* permite rolar a página na vertical e capturar o arrasto na horizontal */
+  touch-action: pan-y;
+  cursor: ew-resize;
+}
 
-    /* Imagem Sobreposta (Economista - Recortada via CSS) */
-    .imgForegroundWrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%; /* Controlado dinamicamente via JS */
-      height: 100%;
-      overflow: hidden;
-      z-index: 1;
-    }
+/* Imagem (usada no fundo e na camada da frente) */
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
 
-    .imgForeground {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      /* Define a largura igual à do container pai para evitar distorção no resize */
-      width: var(--container-width, 600px);
-      max-width: none;
-      object-fit: cover;
-    }
+/* Camada da frente (economista), recortada via clip-path pelo JS */
+.foreground {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
 
-    /* Linha Divisória Interativa */
-    .sliderHandle {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%; /* Controlado dinamicamente via JS */
-      width: 4px;
-      background: #38f8ab;
-      z-index: 2;
-      transform: translateX(-50%);
-      cursor: ew-resize;
-      box-shadow: 0 0 10px rgba(56, 248, 213, 0.8);
-    }
+/* Linha divisória interativa */
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  z-index: 2;
+  transform: translateX(-50%);
+  background: var(--slider-accent);
+  box-shadow: 0 0 10px var(--slider-accent);
+  touch-action: none;
+}
 
-    /* Botão Central na Linha Divisória */
-    .sliderButton {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40px;
-      height: 40px;
-      background-color: #0f0b0f;
-      border: 2px solid #38f8ab;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #38f8ab;
-      font-weight: bold;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
-    }
+/* Aumenta a área de toque da linha sem mudar o visual */
+.handle::before {
+  content: "";
+  position: absolute;
+  inset: 0 -20px;
+}
 
-    /* Badges Informativas */
-    .badge {
-      position: absolute;
-      bottom: 16px;
-      padding: 6px 12px;
-      background-color: rgba(15, 23, 42, 0.85);
-      color: #f8fafc;
-      font-size: 0.85rem;
-      font-weight: 600;
-      border-radius: 6px;
-      backdrop-filter: blur(4px);
-      z-index: 3;
-      pointer-events: none;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+.handle:focus-visible {
+  outline: 2px solid var(--text, #fff);
+  outline-offset: 4px;
+}
 
-    .badgeLeft {
-      left: 16px;
-    }
+/* Botão central na linha divisória */
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--slider-accent);
+  border-radius: 50%;
+  background-color: #0f0b0f;
+  color: var(--slider-accent);
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
 
-    .badgeRight {
-      right: 16px;
-    }
+/* Badges informativas */
+.badge {
+  position: absolute;
+  bottom: 16px;
+  z-index: 3;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #f8fafc;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.badgeLeft {
+  left: 16px;
+}
+
+.badgeRight {
+  right: 16px;
+}
