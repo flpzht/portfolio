@@ -79,6 +79,15 @@ Este portfolio foi desenvolvido com foco em:
 
 ## 🎨 Recursos
 
+### Tema
+
+O portfolio possui suporte a:
+
+* 🌙 Tema escuro
+* ☀️ Tema claro
+
+A preferência de tema é armazenada no `localStorage`.
+
 ### Componentes reutilizáveis
 
 O projeto utiliza componentes reutilizáveis para elementos recorrentes da interface, como:
@@ -87,6 +96,7 @@ O projeto utiliza componentes reutilizáveis para elementos recorrentes da inter
 * `Button`
 * `Navbar`
 * `Footer`
+* `ThemeToggle`
 
 ### Dados
 
