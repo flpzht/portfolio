@@ -78,7 +78,7 @@ ol {
 
 ::selection {
   background: var(--primary);
-  color: var(--text);
+  color: var(--on-primary);
 }
 
 :focus-visible {

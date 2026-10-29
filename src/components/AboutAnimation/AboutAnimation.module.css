@@ -1,6 +1,6 @@
 /* Container principal */
 .sliderContainer {
-  --slider-accent: var(--primary, #38f8ab);
+  --slider-accent: var(--primary);
 
   position: relative;
   width: 100%;
@@ -69,7 +69,7 @@
   height: 40px;
   border: 2px solid var(--slider-accent);
   border-radius: 50%;
-  background-color: #0f0b0f;
+  background-color: var(--background);
   color: var(--slider-accent);
   font-weight: bold;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
@@ -83,8 +83,8 @@
   padding: 6px 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
-  background-color: rgba(15, 23, 42, 0.85);
-  color: #f8fafc;
+  background-color: rgba(62, 50, 57, 0.85);
+  color: #f7efe7;
   font-size: 0.85rem;
   font-weight: 600;
   backdrop-filter: blur(4px);

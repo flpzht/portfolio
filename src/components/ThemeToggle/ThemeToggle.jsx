@@ -4,7 +4,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 import styles from "./ThemeToggle.module.css";
 
-const THEME_COLORS = { dark: "#0f0b0f", light: "#f3e4eb" };
+const THEME_COLORS = { dark: "#3e3239", light: "#f7efe7" };
 
 function getInitialTheme() {
   try {
