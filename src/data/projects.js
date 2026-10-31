@@ -37,18 +37,6 @@ const projects = [
     demo: "https://flp-around-us.verymad.net/signin",
   },
   {
-    id: "pokedex",
-    media: { image: pokedexImage },
-    technologies: [
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "PokéAPI",
-    ],
-    repos: [{ type: "github", href: "https://github.com/flpzht/card-flip-overlay" }],
-    demo: "https://flpzht.github.io/card-flip-overlay/",
-  },
-  {
     id: "news",
     media: { mp4: newsMp4, webm: newsWebm, poster: newsPoster },
     technologies: [
@@ -62,6 +50,19 @@ const projects = [
       { type: "frontend", href: "https://github.com/flpzht/news-explorer-frontend" },
       { type: "backend", href: "https://github.com/flpzht/news-explorer-backend" },
     ],
+    demo: "https://flp-news-explorer.verymad.net/",
+  },
+  {
+    id: "pokedex",
+    media: { image: pokedexImage },
+    technologies: [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "PokéAPI",
+    ],
+    repos: [{ type: "github", href: "https://github.com/flpzht/card-flip-overlay" }],
+    demo: "https://flpzht.github.io/card-flip-overlay/",
   },
 ];
 
